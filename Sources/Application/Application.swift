@@ -22,6 +22,7 @@ public final class App {
         initializeMetrics(in: self)
         initializeHealthRoutes(in: self)
         initializeStoeffnRoutes(in: self)
+        initializeStudAppRoutes(in: self)
     }
 
     public func run() throws {

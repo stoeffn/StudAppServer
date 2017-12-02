@@ -52,6 +52,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		24CB22461FD33E81003334A7 /* StudAppRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24CB22451FD33E81003334A7 /* StudAppRoutes.swift */; };
 		OBJ_1018 /* LclJSONSerialization.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_87 /* LclJSONSerialization.swift */; };
 		OBJ_1019 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_88 /* SwiftyJSON.swift */; };
 		OBJ_1025 /* SwiftDataCollector.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* SwiftDataCollector.swift */; };
@@ -2262,6 +2263,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		24CB22451FD33E81003334A7 /* StudAppRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudAppRoutes.swift; sourceTree = "<group>"; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"Configuration::Configuration::Product" /* Configuration.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Configuration.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -3059,6 +3061,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		24CB22441FD33E6D003334A7 /* StudApp */ = {
+			isa = PBXGroup;
+			children = (
+				24CB22451FD33E81003334A7 /* StudAppRoutes.swift */,
+			);
+			path = StudApp;
+			sourceTree = "<group>";
+		};
 		OBJ_104 /* Request */ = {
 			isa = PBXGroup;
 			children = (
@@ -3100,6 +3110,7 @@
 		OBJ_12 /* Routes */ = {
 			isa = PBXGroup;
 			children = (
+				24CB22441FD33E6D003334A7 /* StudApp */,
 				OBJ_13 /* Health */,
 				OBJ_15 /* Stoeffn */,
 			);
@@ -5914,6 +5925,7 @@
 				OBJ_731 /* Application.swift in Sources */,
 				OBJ_732 /* InitializationError.swift in Sources */,
 				OBJ_733 /* Metrics.swift in Sources */,
+				24CB22461FD33E81003334A7 /* StudAppRoutes.swift in Sources */,
 				OBJ_734 /* HealthRoutes.swift in Sources */,
 				OBJ_735 /* StoeffnRoutes.swift in Sources */,
 			);
