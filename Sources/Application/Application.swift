@@ -5,6 +5,7 @@ import Configuration
 import CloudEnvironment
 import KituraContracts
 import Health
+import KituraStencil
 
 public let projectPath = ConfigurationManager.BasePath.project.path
 public let health = Health()
@@ -16,9 +17,11 @@ public final class App {
     public init() throws {}
 
     func postInit() throws {
-        initializeMetrics(app: self)
+        router.setDefault(templateEngine: StencilTemplateEngine())
 
-        initializeHealthRoutes(app: self)
+        initializeMetrics(in: self)
+        initializeHealthRoutes(in: self)
+        initializeStoeffnRoutes(in: self)
     }
 
     public func run() throws {

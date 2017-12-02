@@ -1,6 +1,6 @@
 import LoggerAPI
 
-func initializeHealthRoutes(app: App) {
+func initializeHealthRoutes(in app: App) {
     app.router.get("/health") { _, response, _ in
         let result = health.status.toSimpleDictionary()
 

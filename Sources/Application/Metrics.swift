@@ -7,7 +7,7 @@ private var swiftMetrics: SwiftMetrics?
 private var swiftMetricsDash: SwiftMetricsDash?
 private var swiftMetricsPrometheus: SwiftMetricsPrometheus?
 
-func initializeMetrics(app: App) {
+func initializeMetrics(in app: App) {
     do {
         let metrics = try SwiftMetrics()
         let dashboard = try SwiftMetricsDash(swiftMetricsInstance: metrics, endpoint: app.router)
