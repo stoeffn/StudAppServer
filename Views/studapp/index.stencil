@@ -7,5 +7,5 @@
 {% endblock %}
 
 {% block navigationLinks %}
-    <li><a href="/studapp/privacy">Datenschutzhinweise</a></li>
+    {% include "studapp/navigationLinks.stencil" %}
 {% endblock %}
