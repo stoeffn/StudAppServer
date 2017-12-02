@@ -10,10 +10,15 @@
     </head>
     <body>
         {% block body %}
-            {% include "components/navigationBar.stencil" %}
+            <header>
+                {% include "components/navigationBar.stencil" %}
+            </header>
             <main class="container">
                 {% block main %}{% endblock %}
             </main>
+            <footer class="footer">
+                {% include "components/footer.stencil" %}
+            </footer>
         {% endblock %}
     </body>
 </html>
