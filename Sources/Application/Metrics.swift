@@ -3,9 +3,9 @@ import SwiftMetricsDash
 import SwiftMetricsPrometheus
 import LoggerAPI
 
-var swiftMetrics: SwiftMetrics?
-var swiftMetricsDash: SwiftMetricsDash?
-var swiftMetricsPrometheus: SwiftMetricsPrometheus?
+private var swiftMetrics: SwiftMetrics?
+private var swiftMetricsDash: SwiftMetricsDash?
+private var swiftMetricsPrometheus: SwiftMetricsPrometheus?
 
 func initializeMetrics(app: App) {
     do {

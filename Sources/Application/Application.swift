@@ -9,18 +9,15 @@ import Health
 public let projectPath = ConfigurationManager.BasePath.project.path
 public let health = Health()
 
-public class App {
+public final class App {
     let router = Router()
     let cloudEnv = CloudEnv()
 
-    public init() throws {
-    }
+    public init() throws {}
 
     func postInit() throws {
-        // Capabilities
         initializeMetrics(app: self)
 
-        // Endpoints
         initializeHealthRoutes(app: self)
     }
 
