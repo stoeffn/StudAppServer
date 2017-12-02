@@ -133,6 +133,9 @@ ul.list {
 
     float: right;
 }
+.navigationBar li {
+    display: inline-block;
+}
 .navigationBar li a {
     padding-left: 8px;
     padding-right: 8px;
