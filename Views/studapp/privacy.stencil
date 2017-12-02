@@ -1,0 +1,95 @@
+{% extends "base.stencil" %}
+
+{% block title %}StudApp—Datenschutzhinweise{% endblock %}
+
+{% block navigationTitle %}
+    <a href="/studapp">StudApp</a>
+{% endblock %}
+
+{% block navigationLinks %}
+    <li><a href="/studapp/privacy">Datenschutzhinweise</a></li>
+{% endblock %}
+
+{% block main %}
+    <h1>Datenschutzhinweise</h1>
+    <p>
+        Privatspähre ist ein Grundbaustein von StudApp. Entsprechend sammelt der Anbieter, Steffen Ryll, so wenig Daten wie möglich. In diesen Datenschutzhinweisen findest Du genaue Information, welche Daten auf dieser Website und über die App „StudApp“ zu welchem Zweck gesammelt werden.
+    </p>
+
+    <section>
+        <h2>Zugriffsdaten</h2>
+        <h3>App</h3>
+        <p>
+            Selber erhebt der Anbieter in der App <em>keine Zugriffsdaten</em>.
+        </p>
+        <p>
+            Bitte beachte aber, dass Deine Organisation (z.B. Universität) Zugriffsdaten bei der Benutzung von StudApp erheben kann, worauf der Anbieter keinen Einfluss hat.
+        </p>
+        <p>
+            Zu statistischen Zwecken erhebt Apple Inc. anonymisierte Zugriffsdaten bei der Verwendung bestimmter Funktionen der App, wie der Auswahl der Organisation. Diese Zugriffsdaten umfassen Zeit, Plattform, eine anonymisierte Benutzeridentifikation und Operations- bzw. Fehlerdetails und dienen statischen und Fehleranalysezwecken.
+        </p>
+        <h3>Website</h3>
+        <p>
+            Der Anbieter erhebt seinen gesetzlichen Verpflichtungen entsprechend Daten über jeden Zugriff auf diese Website (so genannte Serverlogfiles). Zu den Zugriffsdaten gehören Name der abgerufenen Webseite, Datei, Datum und Uhrzeit des Abrufs, übertragene Datenmenge, Meldung über erfolgreichen Abruf, Browsertyp nebst Version, das Betriebssystem des Nutzers, Referrer URL (die zuvor besuchte Seite), IP-Adresse und der anfragende Provider.
+        </p>
+        <p>
+            Diese Protokolldaten werden nur für statistische Auswertungen zum Zweck des Betriebs, der Sicherheit und der Optimierung des Angebotes. Der Anbieter behält sich jedoch vor, die Protokolldaten nachträglich zu überprüfen, wenn aufgrund konkreter Anhaltspunkte der berechtigte Verdacht einer rechtswidrigen Nutzung besteht.        
+        </p>
+    </section>
+
+    <section>
+        <h2>Zugriffsrechte</h2>
+        <h3>Daten aus Stud.IP</h3>
+        <p>
+            Zur Bereitstellung seiner Dienste greift der Anbieter auf folgende Informationen zu, die über das Stud.IP Deiner Organisation bereitgestellt werden.
+        </p>
+        <ul class="list">
+            <li>Informationen über den angemeldeten Nutzer</li>
+            <li>Verfügbare Semester</li>
+            <li>Veranstaltungen mitsamt Teilnehmerdaten</li>
+            <li>Metadaten von Dateien, die in Veranstaltungen bereitgestellt werden, sowie Dokumente selber</li>
+            <li>Globale und veranstaltungsspezifische Ankündigungen</li>
+        </ul>
+        <p>
+            Diese Daten werden <em>nicht</em> an den Anbieter übermittelt. Sie werden ausschließlich auf dem Gerät, auf dem der Anwender StudApp benutzt, lokal gespeichert. Die Daten werden mit größter Sorgfalt gesichert und, falls möglich, verschlüsselt gespeichert.
+        </p>
+    </section>
+
+    <section>
+        <h2>Sicherheit</h2>
+        <p>
+            Jegliche Kommunikation mit dem Stud.IP Deiner Organisation, Apple Inc. und dem Anbieter findet ausschließlich über nach aktuellen industriellen Standards gesicherte Verbindungen (TLS) statt.
+        </p>
+        <p>
+            Lokale Daten auf Deinen Geräten werden stets vor fremden Zugriff geschützt und werden, soweit möglich, verschlüsselt gespeichert.
+        </p>
+        <p>
+            Die Authentifizierung mit dem Stud.IP Deines Anbieters funktioniert über das sogenannte OAuth-Verfahren. Dabei erhält der Anbieter keinen Zugriff auf Dein Passwort. Lediglich ein einmaliger, zufällig generierter Zugangsschlüssel wird zu Authentifizierungszwecken verschlüsselt gespeichert.
+        </p>
+    </section>
+
+    <section>
+        <h2>Personenbezogene Daten</h2>
+        <h3>Definition</h3>
+        <p>
+            Personenbezogene Daten sind Informationen, mit deren Hilfe eine Person bestimmbar ist, also Angaben, die zurück zu einer Person verfolgt werden können. Dazu gehören der Name, die E-Mail-Adresse oder die Telefonnummer. Aber auch Daten über Vorlieben, Hobbies, Mitgliedschaften oder welche Webseiten von jemandem angesehen wurden zählen zu personenbezogenen Daten.
+        </p>
+        <h3>Verwendung</h3>
+        <p>
+            Personenbezogene Daten werden von dem Anbieter nur dann erhoben, genutzt und weiter gegeben, wenn dies gesetzlich erlaubt ist und die Nutzer in die Datenerhebung einwilligen.
+        </p>
+        <p>
+            Bei der Kontaktaufnahme mit dem Anbieter (zum Beispiel per Kontaktformular oder E-Mail) werden die Angaben des Nutzers zwecks Bearbeitung der Anfrage sowie für den Fall, dass Anschlussfragen entstehen, gespeichert.
+        </p>
+    </section>
+
+    <section>
+        <h2>Auskunft und Löschung</h2>
+        <p>
+            Du hast jederzeit das Recht auf unentgeltliche Auskunft über Deine gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.
+        </p>
+        <p>
+            Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten kannst Du dich jederzeit über die E-Mail-Adresse <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a> oder die im Impressum angegeben Kontaktinformationen an uns wenden.                
+        </p>
+    </section>
+{% endblock %}

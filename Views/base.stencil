@@ -1,6 +1,8 @@
 <!doctype html>
 <html>
     <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
         <title>{% block title %}Title{% endblock %}</title>
 
         <link href="/static/reset.css" rel="stylesheet" type="text/css" />
@@ -9,6 +11,9 @@
     <body>
         {% block body %}
             {% include "components/navigationbar.stencil" %}
+            <main class="container">
+                {% block main %}{% endblock %}
+            </main>
         {% endblock %}
     </body>
 </html>

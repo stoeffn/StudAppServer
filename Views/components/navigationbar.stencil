@@ -1,8 +1,8 @@
 <nav class="navigationBar">
     <div class="container">
-        <h1>
+        <h2>
             {% block navigationTitle %}Title{% endblock %}
-        </h1>
+        </h2>
         <ul>
             {% block navigationLinks %}{% endblock %}
         </ul>

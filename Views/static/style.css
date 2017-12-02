@@ -1,5 +1,13 @@
 body {
     font-family: SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+
+    background: white;
+    line-height: 1.5;
+}
+
+main {
+    padding-top: 72px;
+    padding-bottom: 24px;
 }
 
 a {
@@ -15,6 +23,62 @@ a:active {
     opacity: 0.4;
 }
 
+em {
+    font-weight: 500;
+    font-style: italic;
+}
+
+p, li {
+    color: #555555;
+    font-size: 16px;
+}
+
+p {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 500;
+    color: #222222;
+}
+h1 {
+    margin-top: 20px;
+    margin-bottom: 16px;
+
+    font-size: 36px;
+}
+h2 {
+    margin-top: 16px;
+    margin-bottom: 12px;
+
+    font-size: 28px;
+}
+h3 {
+    margin-top: 12px;
+    margin-bottom: 8px;
+
+    font-size: 22px;
+}
+h4 {
+    margin-top: 12px;
+    margin-bottom: 6px;
+
+    font-size: 20px;
+}
+h5 {
+    margin-top: 8px;
+    margin-bottom: 4px;
+
+    font-size: 18px;
+}
+h6 {
+    margin-top: 6px;
+    margin-bottom: 2px;
+
+    font-size: 16px;
+}
+
 .container {
     width: 100%;
     margin-right: auto;
@@ -22,29 +86,31 @@ a:active {
     padding-left: 16px;
     padding-right: 16px;
 }
-
 @media (min-width: 576px) {
     .container {
-        max-width: 540px;
+        max-width: 512px;
     }
 }
-
 @media (min-width: 768px) {
     .container {
-        max-width: 720px;
+        max-width: 680px;
     }
 }
-
 @media (min-width: 992px) {
     .container {
-        max-width: 960px;
+        max-width: 900px;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1024px;
     }
 }
 
-@media (min-width: 1200px) {
-    .container {
-        max-width: 1140px;
-    }
+ul.list {
+    margin-left: 42px;
+
+    list-style-type: disc;
 }
 
 .navigationBar {
@@ -63,7 +129,7 @@ a:active {
     z-index: 999;
 }
 .navigationBar ul {
-    padding-top: 16px;
+    padding-top: 14px;
 
     float: right;
 }
@@ -74,16 +140,15 @@ a:active {
 .navigationBar li a:last-child {
     padding-right: 0;
 }
-.navigationBar h1 {
-    padding-top: 12px;
-
+.navigationBar h2 {
+    margin-top: 8px;
     float: left;
 }
 .navigationBar a {
-    font-size: 18px;
+    font-size: 16px;
 }
-.navigationBar h1, .navigationBar h1 a {
-    color: #111111;
+.navigationBar h2, .navigationBar h2 a {
+    color: #222222;
     font-size: 24px;
     font-weight: 500;
 }
