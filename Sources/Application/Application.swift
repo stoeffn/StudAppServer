@@ -18,6 +18,7 @@ public final class App {
 
     func postInit() throws {
         router.setDefault(templateEngine: StencilTemplateEngine())
+        router.all("/static", middleware: StaticFileServer(path: "./Views/static"))
 
         initializeMetrics(in: self)
         initializeHealthRoutes(in: self)

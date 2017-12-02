@@ -1,0 +1,11 @@
+{% extends "base.stencil" %}
+
+{% block title %}StudApp{% endblock %}
+
+{% block navigationTitle %}
+    <a href="/studapp">StudApp</a>
+{% endblock %}
+
+{% block navigationLinks %}
+    <li><a href="/studapp/privacy">Privacy Policy</a></li>
+{% endblock %}

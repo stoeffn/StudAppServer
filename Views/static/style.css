@@ -1,0 +1,89 @@
+body {
+    font-family: SF Pro Text, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #00509b;
+    text-decoration: none;
+
+    transition-duration: 300ms;
+}
+a:hover {
+    opacity: 0.6;
+}
+a:active {
+    opacity: 0.4;
+}
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.navigationBar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 48px;
+
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+    background-color: rgba(255, 255, 255, .65);
+
+    border-bottom: 1px solid #d6d6d6;
+
+    z-index: 999;
+}
+.navigationBar ul {
+    padding-top: 16px;
+
+    float: right;
+}
+.navigationBar li a {
+    padding-left: 8px;
+    padding-right: 8px;
+}
+.navigationBar li a:last-child {
+    padding-right: 0;
+}
+.navigationBar h1 {
+    padding-top: 12px;
+
+    float: left;
+}
+.navigationBar a {
+    font-size: 18px;
+}
+.navigationBar h1, .navigationBar h1 a {
+    color: #111111;
+    font-size: 24px;
+    font-weight: 500;
+}

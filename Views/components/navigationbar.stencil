@@ -1,0 +1,10 @@
+<nav class="navigationBar">
+    <div class="container">
+        <h1>
+            {% block navigationTitle %}Title{% endblock %}
+        </h1>
+        <ul>
+            {% block navigationLinks %}{% endblock %}
+        </ul>
+    </div>
+</nav>

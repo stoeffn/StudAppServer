@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{% block title %}Title{% endblock %}</title>
+
+        <link href="/static/reset.css" rel="stylesheet" type="text/css" />
+        <link href="/static/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        {% block body %}
+            {% include "components/navigationbar.stencil" %}
+        {% endblock %}
+    </body>
+</html>
