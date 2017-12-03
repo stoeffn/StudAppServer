@@ -5,12 +5,15 @@ body {
     -ms-hyphens: auto;
     hyphens: auto;
     line-height: 1.5;
-    background: white;
+    
+    background-color: #f7f7f7;
 }
 
 main {
     padding-top: 72px;
     padding-bottom: 24px;
+
+    background: white;
 }
 
 a {
@@ -177,8 +180,6 @@ ul.list {
 }
 
 .footer {
-    background-color: #f7f7f7;
-
     bottom: 0;
     padding-top: 16px;
     padding-bottom: 16px;
