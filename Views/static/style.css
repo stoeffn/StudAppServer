@@ -83,6 +83,19 @@ h6 {
     font-size: 16px;
 }
 
+details {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+summary {
+    font-weight: 500;
+    color: #00509b;
+    outline: none;
+}
+details p {
+    padding-left: 18px;
+}
+
 .container {
     margin-right: auto;
     margin-left: auto;
