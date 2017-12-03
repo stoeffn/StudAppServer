@@ -30,13 +30,13 @@ a:active {
 }
 
 em {
-    font-weight: 500;
+    font-weight: bold;
     font-style: italic;
 }
 
 p, li {
     color: #555555;
-    font-size: 16px;
+    font-size: 17px;
 }
 
 p {
@@ -45,7 +45,7 @@ p {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    font-weight: 500;
+    font-weight: bold;
     color: #222222;
     line-height: 1.1;
 }
@@ -83,7 +83,7 @@ h6 {
     margin-top: 6px;
     margin-bottom: 2px;
 
-    font-size: 16px;
+    font-size: 17px;
 }
 
 details {
@@ -152,7 +152,7 @@ ul.list {
     z-index: 999;
 }
 .navigationBar ul {
-    padding-top: 14px;
+    padding-top: 12px;
 
     float: right;
 }
@@ -171,7 +171,7 @@ ul.list {
     float: left;
 }
 .navigationBar a {
-    font-size: 16px;
+    font-size: 17px;
 }
 .navigationBar h2, .navigationBar h2 a {
     color: #222222;
@@ -212,7 +212,7 @@ ul.list {
 }
 
 .hero {
-    height: 384px;
+    height: 175px;
 }
 .hero img {
     position: absolute;
@@ -222,4 +222,41 @@ ul.list {
     left: 0;
 
     background: #cccccc;
+}
+
+.hero-iPhone {
+    position: relative;
+    margin-top: -128px;
+    margin-right: 32px;
+    width: 33%;
+    float: left;
+}
+.hero-section {
+    position: relative;
+    padding-left: 32px;
+}
+.hero-section h1, .hero-section h2 {
+    color: white;
+}
+.hero-section h1 {
+    font-size: 42px;
+}
+.hero-section h2 {
+    font-weight: normal;
+    opacity: 0.75;
+}
+
+.feature-section {
+    margin-top: 32px;
+}
+.feature-section ul.list {
+    margin-left: 420px;
+}
+.feature-section .list li {
+    padding: 2px;
+}
+
+.app-store-link img {
+    margin-top: 8px;
+    margin-bottom: 8px;
 }
