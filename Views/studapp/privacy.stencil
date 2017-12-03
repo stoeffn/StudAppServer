@@ -16,7 +16,7 @@
         Privatspähre ist ein Grundbaustein von StudApp. Entsprechend sammelt der Anbieter, Steffen Ryll, so wenig Daten wie möglich. In diesen Datenschutzhinweisen findest Du genaue Information, welche Daten auf dieser Website und über die App „StudApp“ zu welchem Zweck gesammelt werden.
     </p>
 
-    <section>
+    <section id="logs">
         <h2>Zugriffsdaten</h2>
         <h3>App</h3>
         <p>
@@ -37,7 +37,7 @@
         </p>
     </section>
 
-    <section>
+    <section id="access-rights">
         <h2>Zugriffsrechte</h2>
         <h3>Daten aus Stud.IP</h3>
         <p>
@@ -56,9 +56,9 @@
     </section>
 
     <section>
-        <h2>Sicherheit</h2>
+        <h2 id="security">Sicherheit</h2>
         <p>
-            Jegliche Kommunikation mit dem Stud.IP Deiner Organisation, Apple Inc. und dem Anbieter findet ausschließlich über nach aktuellen industriellen Standards gesicherte Verbindungen (TLS) statt.
+            Jegliche Kommunikation mit dem Stud.IP Deiner Organisation, Apple Inc. und dem Anbieter findet ausschließlich über nach aktuellen industriellen Standards gesicherte Verbindungen (TLS) statt. Sie erfolgt außerdem, falls Du es in den Systemeinstellungen nicht anders konfiguriert hast, direkt statt.
         </p>
         <p>
             Lokale Daten auf Deinen Geräten werden stets vor fremden Zugriff geschützt und werden, soweit möglich, verschlüsselt gespeichert.
@@ -68,7 +68,7 @@
         </p>
     </section>
 
-    <section>
+    <section id="personal-data">
         <h2>Personenbezogene Daten</h2>
         <h3>Definition</h3>
         <p>
@@ -83,7 +83,7 @@
         </p>
     </section>
 
-    <section>
+    <section id="removal">
         <h2>Auskunft und Löschung</h2>
         <p>
             Du hast jederzeit das Recht auf unentgeltliche Auskunft über Deine gespeicherten personenbezogenen Daten, deren Herkunft und Empfänger und den Zweck der Datenverarbeitung sowie ein Recht auf Berichtigung oder Löschung dieser Daten.

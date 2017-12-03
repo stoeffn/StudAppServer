@@ -36,6 +36,16 @@
     </section>
 
     <section>
+        <h2>Datenschutz</h2>
+        <details>
+            <summary>Was passiert mit meinen Daten aus Stud.IP?</summary>
+            <p>
+                Deine Daten bleiben natürlich lokal auf Deinem Gerät und werden <em>nicht</em> an den Anbieter von StudApp übertragen. Nach Möglichkeit werden die Daten auch verschlüsselt gespeichert. In den <a href="privacy#security">Datenschutzhinweisen</a> findest Du mehr Informationen darüber.
+            </p>
+        </details>
+    </section>
+
+    <section>
         <h2>Anmeldung</h2>
         <details>
             <summary>Warum kann ich meine Hochschule, Firma oder Organisation nicht auswählen?</summary>
