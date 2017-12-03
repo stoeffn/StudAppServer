@@ -2,6 +2,10 @@
 
 {% block title %}StudApp—Hilfe{% endblock %}
 
+{% block css %}
+    <link href="/static/css/studapp.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
 {% block navigationTitle %}
     <a href="/studapp"><img src="/static/img/AppIcon.svg" /> StudApp</a>
 {% endblock %}
