@@ -58,6 +58,9 @@
     <section>
         <h2 id="security">Sicherheit</h2>
         <p>
+            Der Anbieter weist ausdrücklich darauf hin, dass die Datenübertragung im Internet (z.B. bei der Kommunikation per E-Mail) Sicherheitslücken aufweisen und nicht lückenlos vor dem Zugriff durch Dritte geschützt werden kann.
+        </p>
+        <p>
             Jegliche Kommunikation mit dem Stud.IP Deiner Organisation, Apple Inc. und dem Anbieter findet ausschließlich über nach aktuellen industriellen Standards gesicherte Verbindungen (TLS) statt. Sie erfolgt außerdem, falls Du es in den Systemeinstellungen nicht anders konfiguriert hast, direkt statt.
         </p>
         <p>
@@ -90,6 +93,13 @@
         </p>
         <p>
             Hierzu sowie zu weiteren Fragen zum Thema personenbezogene Daten kannst Du dich jederzeit über die E-Mail-Adresse <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a> oder die im Impressum angegeben Kontaktinformationen an uns wenden.                
+        </p>
+    </section>
+
+    <section id="contact">
+        <h2>Kontaktdaten</h2>
+        <p>
+            Die Verwendung der Kontaktdaten des Impressums zur gewerblichen Werbung ist ausdrücklich nicht erwünscht, es sei denn wir hatten zuvor unsere schriftliche Einwilligung erteilt oder es besteht bereits eine Geschäftsbeziehung. Der Anbieter und alle auf dieser Website genannten Personen widersprechen hiermit jeder kommerziellen Verwendung und Weitergabe ihrer Daten.
         </p>
     </section>
 {% endblock %}
