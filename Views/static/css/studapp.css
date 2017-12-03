@@ -100,6 +100,7 @@
         margin-left: 325px;
     }
 }
+
 @media (min-width: 992px) {
     .hero {
         height: 175px;
@@ -115,6 +116,7 @@
         margin-left: 364px;
     }
 }
+
 @media (min-width: 1200px) {
     .hero-iPhone {
         width: 384px;
@@ -122,5 +124,11 @@
 
     .feature-section ul.list {
         margin-left: 448px;
+    }
+}
+
+@media (min-width: 1800px) {
+    .hero > figure img {
+        margin-top: -20%;
     }
 }
