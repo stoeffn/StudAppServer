@@ -45,7 +45,7 @@
 }
 .hero-section h2 {
     font-weight: normal;
-    opacity: 0.75;
+    color: #555555;
 }
 
 .feature-section {
@@ -94,6 +94,7 @@
 
     .hero-section h1, .hero-section h2 {
         color: white;
+        text-shadow: 0px 0px 24px black;
     }
     .feature-section ul.list {
         margin-left: 325px;
