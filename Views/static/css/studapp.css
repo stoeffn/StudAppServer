@@ -24,19 +24,15 @@
 
     background: #cccccc;
 }
-
 .hero-iPhone {
     position: relative;
+    left: 50%;
+    margin-left: -128px;
     margin-top: -128px;
-    margin-right: 36px;
-    width: 384px;
-    float: left;
+    width: 256px;
 }
 .hero-section {
     position: relative;
-}
-.hero-section h1, .hero-section h2 {
-    color: white;
 }
 .hero-section h1 {
     font-size: 42px;
@@ -50,7 +46,7 @@
     margin-top: 32px;
 }
 .feature-section ul.list {
-    margin-left: 448px;
+    margin-left: 32px;
 }
 .feature-section .list li {
     padding: 2px;
@@ -59,4 +55,52 @@
 .app-store-link img {
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        height: 144px;
+    }
+    .hero img {
+        height: 350px;
+    }
+    .hero-iPhone {
+        float: left;
+        left: initial;
+        margin-top: -128px;
+        margin-left: initial;
+        margin-right: 36px;
+        width: 256px;
+    }
+
+    .hero-section h1, .hero-section h2 {
+        color: white;
+    }
+    .feature-section ul.list {
+        margin-left: 325px;
+    }
+}
+@media (min-width: 992px) {
+    .hero {
+        height: 175px;
+    }
+    .hero img {
+        height: 384px;
+    }
+    .hero-iPhone {
+        width: 300px;
+    }
+
+    .feature-section ul.list {
+        margin-left: 364px;
+    }
+}
+@media (min-width: 1200px) {
+    .hero-iPhone {
+        width: 384px;
+    }
+
+    .feature-section ul.list {
+        margin-left: 448px;
+    }
 }
