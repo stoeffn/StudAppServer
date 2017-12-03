@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "CLibreSSL",
+        "repositoryURL": "https://github.com/vapor/clibressl.git",
+        "state": {
+          "branch": null,
+          "revision": "23ddb296981d17a8ee6c7418742a40cad5d2f9d0",
+          "version": "1.0.0"
+        }
+      },
+      {
         "package": "CloudEnvironment",
         "repositoryURL": "https://github.com/IBM-Swift/CloudEnvironment.git",
         "state": {
@@ -47,6 +56,15 @@
         }
       },
       {
+        "package": "CryptoSwift",
+        "repositoryURL": "https://github.com/krzyzanowskim/CryptoSwift.git",
+        "state": {
+          "branch": null,
+          "revision": "d0084e4a6fe9490b3baab3d3c2aad58d3a852daf",
+          "version": "0.8.0"
+        }
+      },
+      {
         "package": "Cryptor",
         "repositoryURL": "https://github.com/IBM-Swift/BlueCryptor.git",
         "state": {
@@ -71,6 +89,15 @@
           "branch": null,
           "revision": "2afeb4c02f5a48a7fbd081fe8607b91eeebd7ecb",
           "version": "1.7.1"
+        }
+      },
+      {
+        "package": "Jay",
+        "repositoryURL": "https://github.com/DanToml/Jay.git",
+        "state": {
+          "branch": null,
+          "revision": "833125251b2d026bee6afa0aff2967a90eb63cd0",
+          "version": "1.0.1"
         }
       },
       {
@@ -143,6 +170,15 @@
           "branch": null,
           "revision": "6b62fe66da9b8794d6581e5c341710eea3173cd4",
           "version": "1.7.1"
+        }
+      },
+      {
+        "package": "OpenCloudKit",
+        "repositoryURL": "https://github.com/BennyKJohnson/OpenCloudKit.git",
+        "state": {
+          "branch": null,
+          "revision": "d8a626145b16d17c837e54cbaa7370c4de2ba2ae",
+          "version": "0.5.9"
         }
       },
       {
