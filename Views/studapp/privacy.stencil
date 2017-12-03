@@ -3,7 +3,7 @@
 {% block title %}StudApp—Datenschutzhinweise{% endblock %}
 
 {% block navigationTitle %}
-    <a href="/studapp">StudApp</a>
+    <a href="/studapp"><img src="/static/img/AppIcon.svg" /> StudApp</a>
 {% endblock %}
 
 {% block navigationLinks %}

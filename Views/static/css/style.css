@@ -167,7 +167,7 @@ ul.list {
     padding-right: 0;
 }
 .navigationBar h2 {
-    margin-top: 12px;
+    margin-top: 8px;
     float: left;
 }
 .navigationBar a {
@@ -177,6 +177,11 @@ ul.list {
     color: #222222;
     font-size: 24px;
     font-weight: 500;
+}
+.navigationBar h2 img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: -6px;
 }
 
 .footer {
