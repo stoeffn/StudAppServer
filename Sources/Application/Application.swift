@@ -29,7 +29,7 @@ public final class App {
     private(set) lazy var cloudKitConfiguration = CKConfig(containers: [
         CKContainerConfig(containerIdentifier: cloudKitContainerIdentifier,
                           environment: .development,
-                          serverToServerKeyAuth: cloudKitAuthentication)
+                          serverToServerKeyAuth: cloudKitAuthentication),
     ])
 
     // MARK: - Life Cycle
