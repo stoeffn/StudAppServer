@@ -51,6 +51,9 @@
                         </li>
                     {% endfor %}
                 </ul>
+                {% if not organizations %}
+                    <em>Organisationen konnten nicht geladen werden</em>
+                {% endif %}
             </p>
         </details>
     </section>
