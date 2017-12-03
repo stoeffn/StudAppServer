@@ -6,6 +6,13 @@ func initializeStudAppRoutes(in app: App) {
             .end()
     }
 
+    app.router.get("/studapp/help") { _, response, next in
+        defer { next() }
+        try response
+            .render("studapp/help", context: [:])
+            .end()
+    }
+
     app.router.get("/studapp/?.*") { _, response, next in
         defer { next() }
         try response
