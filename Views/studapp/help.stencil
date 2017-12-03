@@ -39,6 +39,17 @@
                 StudApp unterstützt zurzeit Deutsch und Englisch. Falls Du eine Sprache vermisst, kannst du StudApp vielleicht helfen sie hinzuzufügen. Schreibe einfach eine E-Mail an <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a>.
             </p>
         </details>
+        <details>
+            <summary>Welche Organisationen unterstützen StudApp?</summary>
+            <p>
+                Zurzeit bieten folgende Hochschulen, Firmen und Organisationen Ihr Stud.IP für StudApp an:
+                <ul class="list">
+                    {% for organization in organizations %}
+                        <li>{{ organization }}</li>
+                    {% endfor %}
+                </ul>
+            </p>
+        </details>
     </section>
 
     <section>

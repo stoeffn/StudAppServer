@@ -24,7 +24,7 @@ public final class App {
 
     private(set) lazy var cloudKitAuthentication = CKServerToServerKeyAuth(
         keyID: "e4d873ce9d440d6b11007ea59c2cd4bd2c7dcfd7ce2def72890cbf19a398245a",
-        privateKeyFile: "\(cloudKitContainerIdentifier).pem")
+        privateKeyFile: "\(projectPath)/\(cloudKitContainerIdentifier).pem")
 
     private(set) lazy var cloudKitConfiguration = CKConfig(containers: [
         CKContainerConfig(containerIdentifier: cloudKitContainerIdentifier,
