@@ -52,6 +52,7 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		2404BBE11FD45243009AD722 /* OrganizationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2404BBDF1FD45242009AD722 /* OrganizationRecord.swift */; };
 		OBJ_1262 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1268 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* Package.swift */; };
 		OBJ_1274 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_113 /* Package.swift */; };
@@ -3148,6 +3149,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2404BBDF1FD45242009AD722 /* OrganizationRecord.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrganizationRecord.swift; sourceTree = "<group>"; };
 		"CLibreSSL::CLibreSSL::Product" /* CLibreSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLibreSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4832,6 +4834,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2404BBDC1FD451F2009AD722 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2404BBDE1FD45242009AD722 /* Organizations */,
+			);
+			path = Models;
+			sourceTree = SOURCE_ROOT;
+		};
+		2404BBDE1FD45242009AD722 /* Organizations */ = {
+			isa = PBXGroup;
+			children = (
+				2404BBDF1FD45242009AD722 /* OrganizationRecord.swift */,
+			);
+			path = Organizations;
+			sourceTree = "<group>";
+		};
 		OBJ_1001 /* osx */ = {
 			isa = PBXGroup;
 			children = (
@@ -6363,6 +6381,7 @@
 				OBJ_9 /* Application.swift */,
 				OBJ_10 /* InitializationError.swift */,
 				OBJ_11 /* Metrics.swift */,
+				2404BBDC1FD451F2009AD722 /* Models */,
 				OBJ_12 /* Routes */,
 			);
 			name = Application;
@@ -8462,6 +8481,7 @@
 				OBJ_1634 /* HealthRoutes.swift in Sources */,
 				OBJ_1635 /* StoeffnRoutes.swift in Sources */,
 				OBJ_1636 /* StudAppRoutes.swift in Sources */,
+				2404BBE11FD45243009AD722 /* OrganizationRecord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

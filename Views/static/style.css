@@ -191,3 +191,17 @@ ul.list {
 .footer li a:first-child {
     padding-left: 0;
 }
+
+.organization-list li {
+    margin-left: 42px;
+}
+.organization-list img {
+    margin-bottom: -6px;
+    width: 32px;
+    height: 32px;
+}
+.organization-list h3 {
+    margin: 0;
+    margin-left: 8px;
+    display: inline-block;
+}

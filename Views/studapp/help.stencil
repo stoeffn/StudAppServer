@@ -43,9 +43,12 @@
             <summary>Welche Organisationen unterstützen StudApp?</summary>
             <p>
                 Zurzeit bieten folgende Hochschulen, Firmen und Organisationen Ihr Stud.IP für StudApp an:
-                <ul class="list">
+                <ul class="organization-list">
                     {% for organization in organizations %}
-                        <li>{{ organization }}</li>
+                        <li>
+                            <img src="{{ organization.iconThumbnailUrl }}" />
+                            <h3>{{ organization.title }}</h3>
+                        </li>
                     {% endfor %}
                 </ul>
             </p>
