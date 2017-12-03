@@ -9,3 +9,9 @@
 {% block navigationLinks %}
     {% include "studapp/navigationLinks.stencil" %}
 {% endblock %}
+
+{% block main %}
+    <div class="hero">
+        <img />
+    </div>
+{% endblock %}
