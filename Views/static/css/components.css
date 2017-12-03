@@ -10,12 +10,23 @@
 
     border-bottom: 1px solid #d6d6d6;
 
+    overflow-x: scroll;
+    overflow-y: hidden;
+
     z-index: 999;
 }
-.navigationBar ul {
-    padding-top: 12px;
+.navigationBar .container {
+    width: auto;
+    height: 48px;
 
-    float: right;
+    white-space: nowrap;
+
+    display: inline-block;
+}
+.navigationBar ul {
+    padding-top: 14px;
+
+    display: inline-block;
 }
 .navigationBar li {
     display: inline-block;
@@ -28,8 +39,9 @@
     padding-right: 0;
 }
 .navigationBar h2 {
-    margin-top: 8px;
-    float: left;
+    margin-top: 9px;
+
+    display: inline-block;
 }
 .navigationBar a {
     font-size: 17px;
@@ -37,12 +49,12 @@
 .navigationBar h2, .navigationBar h2 a {
     color: #222222;
     font-size: 24px;
-    font-weight: 500;
+    font-weight: bold;
 }
 .navigationBar h2 img {
     width: 32px;
     height: 32px;
-    margin-bottom: -6px;
+    margin-bottom: -8px;
 }
 
 .footer {
@@ -56,4 +68,15 @@
 }
 .footer li a:first-child {
     padding-left: 0;
+}
+
+@media (min-width: 576px) {
+    .navigationBar .container {
+        width: 100%;
+
+        display: block;
+    }
+    .navigationBar ul {
+        float: right;
+    }
 }

@@ -27,9 +27,9 @@
 .hero-iPhone {
     position: relative;
     left: 50%;
-    margin-left: -128px;
+    margin-left: -100px;
     margin-top: -128px;
-    width: 256px;
+    width: 200px;
 }
 .hero-section {
     position: relative;
@@ -55,6 +55,13 @@
 .app-store-link img {
     margin-top: 8px;
     margin-bottom: 8px;
+}
+
+@media (min-width: 576px) {
+    .hero-iPhone {
+        margin-left: -128px;
+        width: 256px;
+    }
 }
 
 @media (min-width: 768px) {
