@@ -9,6 +9,7 @@
 
 ## User settings
 xcuserdata/
+*.xcuserstate
 
 ### Swift ###
 
@@ -20,3 +21,6 @@ Package.resolved
 /config.json
 /spec.json
 ./config/localdev-config.json
+
+### Keys ###
+*.pem

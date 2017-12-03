@@ -1,3 +1,5 @@
+import OpenCloudKit
+
 func initializeStudAppRoutes(in app: App) {
     app.router.get("/studapp/privacy") { _, response, _ in
         try response
