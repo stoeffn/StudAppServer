@@ -15,7 +15,7 @@
 .hero {
     height: 175px;
 }
-.hero img {
+.hero > figure {
     position: absolute;
     width: 100%;
     height: 384px;
@@ -23,12 +23,18 @@
     left: 0;
 
     background: #cccccc;
+
+    overflow: hidden;
+}
+.hero > figure img {
+    height: 125%;
 }
 .hero-iPhone {
     position: relative;
     left: 50%;
     margin-left: -100px;
     margin-top: -128px;
+    margin-bottom: 32px;
     width: 200px;
 }
 .hero-section {
@@ -69,8 +75,13 @@
     .hero {
         height: 144px;
     }
-    .hero img {
+    .hero > figure {
         height: 350px;
+    }
+    .hero > figure img {
+        height: auto;
+        width: 100%;
+        margin-top: -16%;
     }
     .hero-iPhone {
         float: left;
@@ -92,7 +103,7 @@
     .hero {
         height: 175px;
     }
-    .hero img {
+    .hero > figure {
         height: 384px;
     }
     .hero-iPhone {

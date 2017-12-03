@@ -6,7 +6,7 @@
 
     -webkit-backdrop-filter: saturate(180%) blur(20px);
     backdrop-filter: saturate(180%) blur(20px);
-    background-color: rgba(255, 255, 255, .65);
+    background-color: #ffffffa0;
 
     border-bottom: 1px solid #d6d6d6;
 

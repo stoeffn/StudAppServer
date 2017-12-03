@@ -16,7 +16,9 @@
 
 {% block main %}
     <div class="hero">
-        <img />
+        <figure>
+            <img src="/static/img/hero.jpg" />
+        </figure>
     </div>
 
     <img src="/static/img/iphone.png" class="hero-iPhone" />
