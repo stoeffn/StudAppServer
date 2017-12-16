@@ -69,7 +69,7 @@ When you push your application to Bluemix, these values are no longer used, inst
 ### Run
 To build and run the application:
 1. `swift build`
-1. `.build/debug/Stoeffn`
+1. `.build/debug/StudAppServer`
 
 **NOTE**: On macOS you will need to add options to the `swift build` command: `swift build -Xlinker -lc++`
 
@@ -83,7 +83,7 @@ To compile the application using the tools docker image, run:
 * `docker run -v $PWD:/root/project -w /root/project myapp-build /swift-utils/tools-utils.sh build release`
 
 To run the application:
-* `docker run -it -p 8080:8080 -v $PWD:/root/project -w /root/project myapp-run sh -c .build-ubuntu/release/Stoeffn`
+* `docker run -it -p 8080:8080 -v $PWD:/root/project -w /root/project myapp-run sh -c .build-ubuntu/release/StudAppServer`
 
 ### Deploy to Bluemix
 You can deploy your application to Bluemix using:

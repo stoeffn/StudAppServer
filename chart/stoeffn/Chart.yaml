@@ -1,4 +1,4 @@
 apiVersion: v1
 description: A Helm chart for Kubernetes
-name: stoeffn
+name: StudAppServer
 version: 1.0.0
