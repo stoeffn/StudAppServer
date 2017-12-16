@@ -47,3 +47,26 @@ extension OrganizationRecord {
         iconThumbnailUrl = iconThumbnailAsset.fileURL as URL
     }
 }
+
+extension OrganizationRecord {
+    static func fetch(desiredKeys: [OrganizationRecord.Keys], predicate: NSPredicate = NSPredicate(value: true),
+                      handler: @escaping ResultHandler<[OrganizationRecord]>) {
+        var organizations = [OrganizationRecord]()
+
+        let query = CKQuery(recordType: OrganizationRecord.recordType, predicate: predicate)
+
+        let operation = CKQueryOperation(query: query)
+        operation.qualityOfService = .userInitiated
+        operation.desiredKeys = desiredKeys.map { $0.rawValue }
+        operation.queryCompletionBlock = { _, error in
+            let result = Result(organizations, error: error)
+            handler(result)
+        }
+        operation.recordFetchedBlock = { record in
+            guard let organization = OrganizationRecord(from: record) else { return }
+            organizations.append(organization)
+        }
+
+        CKContainer.default().publicCloudDatabase.add(operation)
+    }
+}
