@@ -43,6 +43,7 @@ public final class App {
         CloudKit.shared.configure(with: cloudKitConfiguration)
 
         initializeHealthRoutes(in: self)
+        initializeApiRoutes(in: self)
         initializeWebsiteRoutes(in: self)
     }
 
