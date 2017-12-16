@@ -42,7 +42,6 @@ public final class App {
 
         CloudKit.shared.configure(with: cloudKitConfiguration)
 
-        initializeMetrics(in: self)
         initializeHealthRoutes(in: self)
         initializeStoeffnRoutes(in: self)
         initializeStudAppRoutes(in: self)
