@@ -54,6 +54,7 @@
 /* Begin PBXBuildFile section */
 		243636FE1FE54E77001D1B86 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243636FC1FE54E55001D1B86 /* Result.swift */; };
 		243637021FE54F3D001D1B86 /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243637001FE54F2A001D1B86 /* ApiRoutes.swift */; };
+		243637051FE553CD001D1B86 /* Receipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243637041FE553CD001D1B86 /* Receipt.swift */; };
 		OBJ_1265 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1271 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Package.swift */; };
 		OBJ_1277 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* Package.swift */; };
@@ -3152,6 +3153,7 @@
 /* Begin PBXFileReference section */
 		243636FC1FE54E55001D1B86 /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
 		243637001FE54F2A001D1B86 /* ApiRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRoutes.swift; sourceTree = "<group>"; };
+		243637041FE553CD001D1B86 /* Receipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Receipt.swift; sourceTree = "<group>"; };
 		"CLibreSSL::CLibreSSL::Product" /* CLibreSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLibreSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4853,6 +4855,14 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		243637031FE55356001D1B86 /* Receipts */ = {
+			isa = PBXGroup;
+			children = (
+				243637041FE553CD001D1B86 /* Receipt.swift */,
+			);
+			path = Receipts;
+			sourceTree = "<group>";
+		};
 		OBJ_1001 /* port */ = {
 			isa = PBXGroup;
 			children = (
@@ -5424,6 +5434,7 @@
 		OBJ_12 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				243637031FE55356001D1B86 /* Receipts */,
 				OBJ_13 /* Organizations */,
 			);
 			path = Models;
@@ -8462,6 +8473,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				243637051FE553CD001D1B86 /* Receipt.swift in Sources */,
 				OBJ_1427 /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
