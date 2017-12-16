@@ -43,8 +43,7 @@ public final class App {
         CloudKit.shared.configure(with: cloudKitConfiguration)
 
         initializeHealthRoutes(in: self)
-        initializeStoeffnRoutes(in: self)
-        initializeStudAppRoutes(in: self)
+        initializeWebsiteRoutes(in: self)
     }
 
     public func run() throws {

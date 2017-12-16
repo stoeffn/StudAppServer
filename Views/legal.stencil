@@ -3,11 +3,11 @@
 {% block title %}StudApp—Impressum{% endblock %}
 
 {% block navigationTitle %}
-    <a href="/studapp"><img src="/static/img/AppIcon.svg" /> StudApp</a>
+    <a href="/"><img src="/static/img/AppIcon.svg" /> StudApp</a>
 {% endblock %}
 
 {% block navigationLinks %}
-    {% include "studapp/navigationLinks.stencil" %}
+    {% include "navigationLinks.stencil" %}
 {% endblock %}
 
 {% block main %}

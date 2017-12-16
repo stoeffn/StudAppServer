@@ -163,8 +163,7 @@
 		OBJ_1636 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Metrics.swift */; };
 		OBJ_1637 /* OrganizationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* OrganizationRecord.swift */; };
 		OBJ_1638 /* HealthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HealthRoutes.swift */; };
-		OBJ_1639 /* StoeffnRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* StoeffnRoutes.swift */; };
-		OBJ_1640 /* StudAppRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* StudAppRoutes.swift */; };
+		OBJ_1640 /* WebsiteRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* WebsiteRoutes.swift */; };
 		OBJ_1642 /* OpenCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "OpenCloudKit::OpenCloudKit::Product" /* OpenCloudKit.framework */; };
 		OBJ_1643 /* Jay.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Jay::Jay::Product" /* Jay.framework */; };
 		OBJ_1644 /* CryptoSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "CryptoSwift::CryptoSwift::Product" /* CryptoSwift.framework */; };
@@ -3424,7 +3423,6 @@
 		OBJ_185 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/steffenryll/Repositories/StudAppServer/.build/checkouts/CryptoSwift.git--6440749087414195235/Package.swift"; sourceTree = "<group>"; };
 		OBJ_188 /* a_bitstr.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_bitstr.c; sourceTree = "<group>"; };
 		OBJ_189 /* a_bool.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_bool.c; sourceTree = "<group>"; };
-		OBJ_19 /* StoeffnRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoeffnRoutes.swift; sourceTree = "<group>"; };
 		OBJ_190 /* a_bytes.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_bytes.c; sourceTree = "<group>"; };
 		OBJ_191 /* a_d2i_fp.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_d2i_fp.c; sourceTree = "<group>"; };
 		OBJ_192 /* a_digest.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_digest.c; sourceTree = "<group>"; };
@@ -3445,7 +3443,7 @@
 		OBJ_207 /* a_type.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_type.c; sourceTree = "<group>"; };
 		OBJ_208 /* a_utf8.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_utf8.c; sourceTree = "<group>"; };
 		OBJ_209 /* a_verify.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_verify.c; sourceTree = "<group>"; };
-		OBJ_21 /* StudAppRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudAppRoutes.swift; sourceTree = "<group>"; };
+		OBJ_21 /* WebsiteRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebsiteRoutes.swift; sourceTree = "<group>"; };
 		OBJ_210 /* aes_cbc.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_cbc.c; sourceTree = "<group>"; };
 		OBJ_211 /* aes_cfb.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_cfb.c; sourceTree = "<group>"; };
 		OBJ_212 /* aes_core.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = aes_core.c; sourceTree = "<group>"; };
@@ -5557,8 +5555,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_16 /* Health */,
-				OBJ_18 /* Stoeffn */,
-				OBJ_20 /* StudApp */,
+				OBJ_20 /* Website */,
 			);
 			path = Routes;
 			sourceTree = "<group>";
@@ -5581,14 +5578,6 @@
 				OBJ_167 /* PKCS7Padding.swift */,
 			);
 			path = PKCS;
-			sourceTree = "<group>";
-		};
-		OBJ_18 /* Stoeffn */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_19 /* StoeffnRoutes.swift */,
-			);
-			path = Stoeffn;
 			sourceTree = "<group>";
 		};
 		OBJ_186 /* CLibreSSL 1.0.0 */ = {
@@ -6225,12 +6214,12 @@
 			path = ".build/checkouts/clibressl.git-4924093653370840509/Sources/CLibreSSL";
 			sourceTree = SOURCE_ROOT;
 		};
-		OBJ_20 /* StudApp */ = {
+		OBJ_20 /* Website */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_21 /* StudAppRoutes.swift */,
+				OBJ_21 /* WebsiteRoutes.swift */,
 			);
-			path = StudApp;
+			path = Website;
 			sourceTree = "<group>";
 		};
 		OBJ_22 /* StudAppServer */ = {
@@ -8480,8 +8469,7 @@
 				OBJ_1636 /* Metrics.swift in Sources */,
 				OBJ_1637 /* OrganizationRecord.swift in Sources */,
 				OBJ_1638 /* HealthRoutes.swift in Sources */,
-				OBJ_1639 /* StoeffnRoutes.swift in Sources */,
-				OBJ_1640 /* StudAppRoutes.swift in Sources */,
+				OBJ_1640 /* WebsiteRoutes.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

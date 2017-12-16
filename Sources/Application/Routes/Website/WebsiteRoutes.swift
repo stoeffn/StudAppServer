@@ -1,14 +1,20 @@
 import Foundation
 import OpenCloudKit
 
-func initializeStudAppRoutes(in app: App) {
-    app.router.get("/studapp/privacy") { _, response, _ in
+func initializeWebsiteRoutes(in app: App) {
+    app.router.get("/privacy") { _, response, _ in
         try response
-            .render("studapp/privacy", context: [:])
+            .render("privacy", context: [:])
             .end()
     }
 
-    app.router.get("/studapp/help") { _, response, _ in
+    app.router.get("/legal") { _, response, _ in
+        try response
+            .render("legal", context: [:])
+            .end()
+    }
+
+    app.router.get("/help") { _, response, _ in
         var organizations = [OrganizationRecord]()
 
         let query = CKQuery(recordType: OrganizationRecord.recordType, predicate: NSPredicate(value: true))
@@ -22,11 +28,11 @@ func initializeStudAppRoutes(in app: App) {
             case nil:
                 let context: [String: Any] = ["organizations": organizations]
                 try? response
-                    .render("studapp/help", context: context)
+                    .render("help", context: context)
                     .end()
             default:
                 try? response
-                    .render("studapp/help", context: [:])
+                    .render("help", context: [:])
                     .end()
             }
         }
@@ -38,9 +44,9 @@ func initializeStudAppRoutes(in app: App) {
         CKContainer.default().publicCloudDatabase.add(operation)
     }
 
-    app.router.get("/studapp/?.*") { _, response, _ in
+    app.router.get("/") { _, response, _ in
         try response
-            .render("studapp/index", context: [:])
+            .render("index", context: [:])
             .end()
     }
 }

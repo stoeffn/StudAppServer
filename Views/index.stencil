@@ -1,1 +1,50 @@
-Hello, {{ name }}!
+{% extends "base.stencil" %}
+
+{% block title %}StudApp{% endblock %}
+
+{% block css %}
+    <link href="/static/css/studapp.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block navigationTitle %}
+    <a href="/"><img src="/static/img/AppIcon.svg" /> StudApp</a>
+{% endblock %}
+
+{% block navigationLinks %}
+    {% include "navigationLinks.stencil" %}
+{% endblock %}
+
+{% block main %}
+    <div class="hero">
+        <figure>
+            <img src="/static/img/hero.jpg" />
+        </figure>
+    </div>
+
+    <img src="/static/img/iphone.png" class="hero-iPhone" />
+
+    <section class="hero-section">
+        <h1>StudApp</h1>
+        <h2>Stud.IP unterwegs</h2>
+    </section>
+
+    <section class="feature-section">
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+        </p>
+
+        <a href="#" class="app-store-link">
+            <img src="/static/img/AppStoreBadge.svg" alt="Im App Store herunterladen" />
+        </a>
+
+        <p></p>
+
+        <ul class="list">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>consectetur adipisici elit</li>
+            <li>sed eiusmod tempor incidunt ut labore et dolore magna aliqua</li>
+            <li>Ut enim ad minim veniam</li>
+            <li>quis nostrud exercitation ullamco laboris nisi</li>
+        </ul>
+    </section>
+{% endblock %}
