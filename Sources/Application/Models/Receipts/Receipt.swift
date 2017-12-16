@@ -7,6 +7,20 @@
 
 import Foundation
 
+struct ReceiptRequest: Codable {
+    let receiptData: Data
+
+    let sharedSecret: String?
+
+    let excludesOldTransactions: Bool
+
+    enum CodingKeys: String, CodingKey {
+        case receiptData = "receipt-data"
+        case sharedSecret = "password"
+        case excludesOldTransactions = "exclude-old-transactions"
+    }
+}
+
 struct ReceiptResponse: Codable {
     let statusCode: Int
 
