@@ -10,7 +10,7 @@ import OpenCloudKit
 
 public let health = Health()
 
-public final class App {
+public final class StudAppServer {
     // MARK: - Kitura
 
     let router = Router()
@@ -26,8 +26,8 @@ public final class App {
         let config = try CKConfig(contentsOfFile: "\(ConfigurationManager.BasePath.pwd.path)/CloudKitConfiguration.json")
         CloudKit.shared.configure(with: config)
 
-        initializeApiRoutes(in: self)
-        initializeWebsiteRoutes(in: self)
+        initializeApiRoutes(in: router)
+        initializeWebsiteRoutes(in: router)
     }
 
     public func run() {

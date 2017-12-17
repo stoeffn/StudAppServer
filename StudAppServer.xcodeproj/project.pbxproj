@@ -120,7 +120,7 @@
 		OBJ_1486 /* Socket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Socket::Socket::Product" /* Socket.framework */; };
 		OBJ_1487 /* LoggerAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "LoggerAPI::LoggerAPI::Product" /* LoggerAPI.framework */; };
 		OBJ_1488 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
-		OBJ_1571 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Application.swift */; };
+		OBJ_1571 /* StudAppServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* StudAppServer.swift */; };
 		OBJ_1572 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Result.swift */; };
 		OBJ_1573 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* Metrics.swift */; };
 		OBJ_1574 /* OrganizationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* OrganizationRecord.swift */; };
@@ -128,7 +128,7 @@
 		OBJ_1576 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* InAppReceipt.swift */; };
 		OBJ_1577 /* ReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* ReceiptRequest.swift */; };
 		OBJ_1578 /* ReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ReceiptResponse.swift */; };
-		OBJ_1579 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ReceiptService.swift */; };
+		OBJ_1579 /* AppStoreService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* AppStoreService.swift */; };
 		OBJ_1580 /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ApiRoutes.swift */; };
 		OBJ_1582 /* WebsiteRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* WebsiteRoutes.swift */; };
 		OBJ_1583 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* main.swift */; };
@@ -3300,7 +3300,7 @@
 		OBJ_207 /* a_set.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_set.c; sourceTree = "<group>"; };
 		OBJ_208 /* a_sign.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_sign.c; sourceTree = "<group>"; };
 		OBJ_209 /* a_strex.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_strex.c; sourceTree = "<group>"; };
-		OBJ_21 /* ReceiptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptService.swift; sourceTree = "<group>"; };
+		OBJ_21 /* AppStoreService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStoreService.swift; sourceTree = "<group>"; };
 		OBJ_210 /* a_strnid.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_strnid.c; sourceTree = "<group>"; };
 		OBJ_211 /* a_time.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_time.c; sourceTree = "<group>"; };
 		OBJ_212 /* a_time_tm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = a_time_tm.c; sourceTree = "<group>"; };
@@ -4042,7 +4042,7 @@
 		OBJ_893 /* SwiftMetricsBAMConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMetricsBAMConfig.swift; sourceTree = "<group>"; };
 		OBJ_897 /* SwiftMetricsBluemix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMetricsBluemix.swift; sourceTree = "<group>"; };
 		OBJ_899 /* SwiftMetricsPrometheus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMetricsPrometheus.swift; sourceTree = "<group>"; };
-		OBJ_9 /* Application.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Application.swift; sourceTree = "<group>"; };
+		OBJ_9 /* StudAppServer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudAppServer.swift; sourceTree = "<group>"; };
 		OBJ_90 /* CKTokenInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CKTokenInfo.swift; sourceTree = "<group>"; };
 		OBJ_901 /* SwiftMetricsDash.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftMetricsDash.swift; sourceTree = "<group>"; };
 		OBJ_902 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; name = Package.swift; path = "/Users/steffenryll/Repositories/StudAppServer/.build/checkouts/SwiftMetrics.git-8417478658542232501/Package.swift"; sourceTree = "<group>"; };
@@ -5331,7 +5331,7 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_14 /* Organizations */,
-				OBJ_16 /* Receipts */,
+				OBJ_16 /* AppStore */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -5377,16 +5377,16 @@
 			path = Foundation;
 			sourceTree = "<group>";
 		};
-		OBJ_16 /* Receipts */ = {
+		OBJ_16 /* AppStore */ = {
 			isa = PBXGroup;
 			children = (
 				OBJ_17 /* AppReceipt.swift */,
 				OBJ_18 /* InAppReceipt.swift */,
 				OBJ_19 /* ReceiptRequest.swift */,
 				OBJ_20 /* ReceiptResponse.swift */,
-				OBJ_21 /* ReceiptService.swift */,
+				OBJ_21 /* AppStoreService.swift */,
 			);
-			path = Receipts;
+			path = AppStore;
 			sourceTree = "<group>";
 		};
 		OBJ_168 /* PKCS */ = {
@@ -6207,7 +6207,7 @@
 		OBJ_8 /* StudAppServer */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_9 /* Application.swift */,
+				OBJ_9 /* StudAppServer.swift */,
 				OBJ_10 /* Helpers */,
 				OBJ_12 /* Metrics.swift */,
 				OBJ_13 /* Models */,
@@ -8350,7 +8350,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_1571 /* Application.swift in Sources */,
+				OBJ_1571 /* StudAppServer.swift in Sources */,
 				OBJ_1572 /* Result.swift in Sources */,
 				OBJ_1573 /* Metrics.swift in Sources */,
 				OBJ_1574 /* OrganizationRecord.swift in Sources */,
@@ -8358,7 +8358,7 @@
 				OBJ_1576 /* InAppReceipt.swift in Sources */,
 				OBJ_1577 /* ReceiptRequest.swift in Sources */,
 				OBJ_1578 /* ReceiptResponse.swift in Sources */,
-				OBJ_1579 /* ReceiptService.swift in Sources */,
+				OBJ_1579 /* AppStoreService.swift in Sources */,
 				OBJ_1580 /* ApiRoutes.swift in Sources */,
 				OBJ_1582 /* WebsiteRoutes.swift in Sources */,
 				OBJ_1583 /* main.swift in Sources */,

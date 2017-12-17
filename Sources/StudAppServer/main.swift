@@ -2,11 +2,11 @@ import Foundation
 import LoggerAPI
 import HeliumLogger
 
-do {
-    HeliumLogger.use(LoggerMessageType.info)
+HeliumLogger.use(LoggerMessageType.info)
 
-    let app = try App()
-    app.run()
+do {
+    let server = try StudAppServer()
+    server.run()
 } catch let error {
     Log.error(error.localizedDescription)
 }

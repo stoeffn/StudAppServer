@@ -24,9 +24,9 @@ final class RouteTests: XCTestCase {
             print("------------New Test----------")
             print("------------------------------")
 
-            let app = try App()
-            RouteTests.port = app.cloudEnv.port
-            Kitura.addHTTPServer(onPort: RouteTests.port, with: app.router)
+            let server = try StudAppServer()
+            RouteTests.port = server.cloudEnv.port
+            Kitura.addHTTPServer(onPort: RouteTests.port, with: server.router)
             Kitura.start()
         } catch {
             XCTFail("Couldn't start Application test server: \(error)")

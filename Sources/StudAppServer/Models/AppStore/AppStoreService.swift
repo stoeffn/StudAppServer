@@ -1,5 +1,5 @@
 //
-//  ReceiptService.swift
+//  AppStoreService.swift
 //  Application
 //
 //  Created by Steffen Ryll on 17.12.17.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-final class ReceiptService {
+final class AppStoreService {
     enum Environment {
         case sandbox
         case production
