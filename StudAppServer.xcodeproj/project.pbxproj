@@ -122,7 +122,6 @@
 		OBJ_1489 /* CHTTPParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "Kitura-net::CHTTPParser::Product" /* CHTTPParser.framework */; };
 		OBJ_1572 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_9 /* Application.swift */; };
 		OBJ_1573 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* Result.swift */; };
-		OBJ_1574 /* InitializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* InitializationError.swift */; };
 		OBJ_1575 /* Metrics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* Metrics.swift */; };
 		OBJ_1576 /* OrganizationRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_16 /* OrganizationRecord.swift */; };
 		OBJ_1577 /* AppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* AppReceipt.swift */; };
@@ -3189,7 +3188,6 @@
 		OBJ_1197 /* HTTPParserStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPParserStatus.swift; sourceTree = "<group>"; };
 		OBJ_1198 /* ParseResults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ParseResults.swift; sourceTree = "<group>"; };
 		OBJ_1199 /* URLParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLParser.swift; sourceTree = "<group>"; };
-		OBJ_12 /* InitializationError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationError.swift; sourceTree = "<group>"; };
 		OBJ_120 /* StringParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringParser.swift; sourceTree = "<group>"; };
 		OBJ_1200 /* HeadersContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadersContainer.swift; sourceTree = "<group>"; };
 		OBJ_1201 /* IncomingSocketHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IncomingSocketHandler.swift; sourceTree = "<group>"; };
@@ -6240,7 +6238,6 @@
 			children = (
 				OBJ_9 /* Application.swift */,
 				OBJ_10 /* Helpers */,
-				OBJ_12 /* InitializationError.swift */,
 				OBJ_13 /* Metrics.swift */,
 				OBJ_14 /* Models */,
 				OBJ_23 /* Routes */,
@@ -8366,7 +8363,6 @@
 			files = (
 				OBJ_1572 /* Application.swift in Sources */,
 				OBJ_1573 /* Result.swift in Sources */,
-				OBJ_1574 /* InitializationError.swift in Sources */,
 				OBJ_1575 /* Metrics.swift in Sources */,
 				OBJ_1576 /* OrganizationRecord.swift in Sources */,
 				OBJ_1577 /* AppReceipt.swift in Sources */,
