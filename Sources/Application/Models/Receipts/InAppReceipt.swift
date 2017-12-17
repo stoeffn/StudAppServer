@@ -1,6 +1,6 @@
 //
 //  InAppReceipt.swift
-//  StudAppServerPackageDescription
+//  Application
 //
 //  Created by Steffen Ryll on 17.12.17.
 //

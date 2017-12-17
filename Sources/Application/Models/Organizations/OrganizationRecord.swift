@@ -1,6 +1,6 @@
 //
 //  OrganizationRecord.swift
-//  StudKit
+//  Application
 //
 //  Created by Steffen Ryll on 26.11.17.
 //  Copyright © 2017 Steffen Ryll. All rights reserved.

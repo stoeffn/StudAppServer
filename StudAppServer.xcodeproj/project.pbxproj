@@ -54,10 +54,11 @@
 /* Begin PBXBuildFile section */
 		243636FE1FE54E77001D1B86 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243636FC1FE54E55001D1B86 /* Result.swift */; };
 		243637021FE54F3D001D1B86 /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243637001FE54F2A001D1B86 /* ApiRoutes.swift */; };
-		24E85E3F1FE67676007B97C8 /* ReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E3E1FE67676007B97C8 /* ReceiptRequest.swift */; };
-		24E85E411FE67680007B97C8 /* ReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E401FE67680007B97C8 /* ReceiptResponse.swift */; };
-		24E85E431FE676AD007B97C8 /* AppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E421FE676AD007B97C8 /* AppReceipt.swift */; };
-		24E85E451FE676B8007B97C8 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E441FE676B8007B97C8 /* InAppReceipt.swift */; };
+		24E85E481FE6775F007B97C8 /* AppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E421FE676AD007B97C8 /* AppReceipt.swift */; };
+		24E85E491FE67762007B97C8 /* InAppReceipt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E441FE676B8007B97C8 /* InAppReceipt.swift */; };
+		24E85E4A1FE67767007B97C8 /* ReceiptRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E3E1FE67676007B97C8 /* ReceiptRequest.swift */; };
+		24E85E4B1FE6776B007B97C8 /* ReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E401FE67680007B97C8 /* ReceiptResponse.swift */; };
+		24E85E4C1FE6776F007B97C8 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24E85E461FE67737007B97C8 /* ReceiptService.swift */; };
 		OBJ_1265 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_1271 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_31 /* Package.swift */; };
 		OBJ_1277 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_116 /* Package.swift */; };
@@ -3160,6 +3161,7 @@
 		24E85E401FE67680007B97C8 /* ReceiptResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptResponse.swift; sourceTree = "<group>"; };
 		24E85E421FE676AD007B97C8 /* AppReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReceipt.swift; sourceTree = "<group>"; };
 		24E85E441FE676B8007B97C8 /* InAppReceipt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InAppReceipt.swift; sourceTree = "<group>"; };
+		24E85E461FE67737007B97C8 /* ReceiptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceiptService.swift; sourceTree = "<group>"; };
 		"CLibreSSL::CLibreSSL::Product" /* CLibreSSL.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CLibreSSL.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudEnvironment::CloudEnvironment::Product" /* CloudEnvironment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudEnvironment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"CloudFoundryEnv::CloudFoundryEnv::Product" /* CloudFoundryEnv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = CloudFoundryEnv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -4864,10 +4866,11 @@
 		243637031FE55356001D1B86 /* Receipts */ = {
 			isa = PBXGroup;
 			children = (
-				24E85E3E1FE67676007B97C8 /* ReceiptRequest.swift */,
-				24E85E401FE67680007B97C8 /* ReceiptResponse.swift */,
 				24E85E421FE676AD007B97C8 /* AppReceipt.swift */,
 				24E85E441FE676B8007B97C8 /* InAppReceipt.swift */,
+				24E85E3E1FE67676007B97C8 /* ReceiptRequest.swift */,
+				24E85E401FE67680007B97C8 /* ReceiptResponse.swift */,
+				24E85E461FE67737007B97C8 /* ReceiptService.swift */,
 			);
 			path = Receipts;
 			sourceTree = "<group>";
@@ -8265,10 +8268,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				24E85E431FE676AD007B97C8 /* AppReceipt.swift in Sources */,
-				24E85E451FE676B8007B97C8 /* InAppReceipt.swift in Sources */,
-				24E85E3F1FE67676007B97C8 /* ReceiptRequest.swift in Sources */,
-				24E85E411FE67680007B97C8 /* ReceiptResponse.swift in Sources */,
 				OBJ_1265 /* Package.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -8511,9 +8510,14 @@
 			buildActionMask = 0;
 			files = (
 				OBJ_1634 /* Application.swift in Sources */,
+				24E85E4C1FE6776F007B97C8 /* ReceiptService.swift in Sources */,
+				24E85E4A1FE67767007B97C8 /* ReceiptRequest.swift in Sources */,
+				24E85E491FE67762007B97C8 /* InAppReceipt.swift in Sources */,
 				OBJ_1635 /* InitializationError.swift in Sources */,
+				24E85E481FE6775F007B97C8 /* AppReceipt.swift in Sources */,
 				OBJ_1636 /* Metrics.swift in Sources */,
 				OBJ_1637 /* OrganizationRecord.swift in Sources */,
+				24E85E4B1FE6776B007B97C8 /* ReceiptResponse.swift in Sources */,
 				243636FE1FE54E77001D1B86 /* Result.swift in Sources */,
 				OBJ_1638 /* HealthRoutes.swift in Sources */,
 				243637021FE54F3D001D1B86 /* ApiRoutes.swift in Sources */,
