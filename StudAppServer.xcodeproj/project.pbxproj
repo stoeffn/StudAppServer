@@ -130,7 +130,6 @@
 		OBJ_1578 /* ReceiptResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* ReceiptResponse.swift */; };
 		OBJ_1579 /* ReceiptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* ReceiptService.swift */; };
 		OBJ_1580 /* ApiRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_24 /* ApiRoutes.swift */; };
-		OBJ_1581 /* HealthRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* HealthRoutes.swift */; };
 		OBJ_1582 /* WebsiteRoutes.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_28 /* WebsiteRoutes.swift */; };
 		OBJ_1583 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_29 /* main.swift */; };
 		OBJ_1585 /* OpenCloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "OpenCloudKit::OpenCloudKit::Product" /* OpenCloudKit.framework */; };
@@ -3353,7 +3352,6 @@
 		OBJ_257 /* bio_ssl.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bio_ssl.c; sourceTree = "<group>"; };
 		OBJ_258 /* bn_add.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_add.c; sourceTree = "<group>"; };
 		OBJ_259 /* bn_asm.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_asm.c; sourceTree = "<group>"; };
-		OBJ_26 /* HealthRoutes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthRoutes.swift; sourceTree = "<group>"; };
 		OBJ_260 /* bn_blind.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_blind.c; sourceTree = "<group>"; };
 		OBJ_261 /* bn_const.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_const.c; sourceTree = "<group>"; };
 		OBJ_262 /* bn_ctx.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = bn_ctx.c; sourceTree = "<group>"; };
@@ -6041,7 +6039,6 @@
 			isa = PBXGroup;
 			children = (
 				OBJ_23 /* Api */,
-				OBJ_25 /* Health */,
 				OBJ_27 /* Website */,
 			);
 			path = Routes;
@@ -6053,14 +6050,6 @@
 				OBJ_24 /* ApiRoutes.swift */,
 			);
 			path = Api;
-			sourceTree = "<group>";
-		};
-		OBJ_25 /* Health */ = {
-			isa = PBXGroup;
-			children = (
-				OBJ_26 /* HealthRoutes.swift */,
-			);
-			path = Health;
 			sourceTree = "<group>";
 		};
 		OBJ_27 /* Website */ = {
@@ -8371,7 +8360,6 @@
 				OBJ_1578 /* ReceiptResponse.swift in Sources */,
 				OBJ_1579 /* ReceiptService.swift in Sources */,
 				OBJ_1580 /* ApiRoutes.swift in Sources */,
-				OBJ_1581 /* HealthRoutes.swift in Sources */,
 				OBJ_1582 /* WebsiteRoutes.swift in Sources */,
 				OBJ_1583 /* main.swift in Sources */,
 			);

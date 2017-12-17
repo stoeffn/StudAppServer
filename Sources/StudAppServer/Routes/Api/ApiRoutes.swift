@@ -10,12 +10,21 @@ import Foundation
 private let apiPath = "/api/v1"
 
 func initializeApiRoutes(in app: App) {
+    app.router.get("\(apiPath)/health") { _, response, _ in
+        let result = health.status.toSimpleDictionary()
+        try response
+            .status(health.status.state == .UP ? .OK : .serviceUnavailable)
+            .send(json: result)
+            .end()
+    }
+
     app.router.post("\(apiPath)/verify-receipt") { request, response, _ in
         var data = Data()
         let length = try request.read(into: &data)
         try response
             .send(json: [
                 "length": length,
+                "state": "LOCKED"
             ])
             .end()
     }

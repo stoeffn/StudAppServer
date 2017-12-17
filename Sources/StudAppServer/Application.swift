@@ -26,7 +26,6 @@ public final class App {
         let config = try CKConfig(contentsOfFile: "\(ConfigurationManager.BasePath.pwd.path)/CloudKitConfiguration.json")
         CloudKit.shared.configure(with: config)
 
-        initializeHealthRoutes(in: self)
         initializeApiRoutes(in: self)
         initializeWebsiteRoutes(in: self)
     }
