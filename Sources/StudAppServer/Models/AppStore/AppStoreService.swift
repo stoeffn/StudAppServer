@@ -30,6 +30,8 @@ final class AppStoreService {
 
     static let shared = AppStoreService()
 
+    lazy var configuration = AppStoreConfig()
+
     private lazy var session = URLSession.shared
 
     private lazy var encoder: JSONEncoder = {
@@ -47,7 +49,7 @@ final class AppStoreService {
             return handler(.failure(Errors.emptyReceipt))
         }
 
-        let requestBody = ReceiptRequest(receipt: receipt)
+        let requestBody = ReceiptRequest(receipt: receipt, sharedSecret: configuration.sharedSecret)
         let encodedRequestBody = try encoder.encode(requestBody)
 
         var request = URLRequest(url: environment.url)

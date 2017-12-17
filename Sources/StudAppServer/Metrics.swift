@@ -1,3 +1,4 @@
+import Kitura
 import SwiftMetrics
 import SwiftMetricsDash
 import SwiftMetricsPrometheus
@@ -7,11 +8,11 @@ private var swiftMetrics: SwiftMetrics?
 private var swiftMetricsDash: SwiftMetricsDash?
 private var swiftMetricsPrometheus: SwiftMetricsPrometheus?
 
-func initializeMetrics(in app: App) {
+func initializeMetrics(in router: Router) {
     do {
         let metrics = try SwiftMetrics()
-        let dashboard = try SwiftMetricsDash(swiftMetricsInstance: metrics, endpoint: app.router)
-        let prometheus = try SwiftMetricsPrometheus(swiftMetricsInstance: metrics, endpoint: app.router)
+        let dashboard = try SwiftMetricsDash(swiftMetricsInstance: metrics, endpoint: router)
+        let prometheus = try SwiftMetricsPrometheus(swiftMetricsInstance: metrics, endpoint: router)
 
         swiftMetrics = metrics
         swiftMetricsDash = dashboard

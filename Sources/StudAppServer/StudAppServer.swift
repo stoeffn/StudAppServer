@@ -23,8 +23,13 @@ public final class StudAppServer {
         router.setDefault(templateEngine: StencilTemplateEngine())
         router.all("/static", middleware: StaticFileServer(path: "./Views/static"))
 
-        let config = try CKConfig(contentsOfFile: "\(ConfigurationManager.BasePath.pwd.path)/CloudKitConfiguration.json")
-        CloudKit.shared.configure(with: config)
+        let projectPath = ConfigurationManager.BasePath.pwd.path
+
+        let cloudKitConfig = try CKConfig(contentsOfFile: "\(projectPath)/CloudKitConfiguration.json")
+        CloudKit.shared.configure(with: cloudKitConfig)
+
+        let appStoreConfig = try AppStoreConfig.fromFile(at: URL(fileURLWithPath: "\(projectPath)/AppStoreConfiguration.json"))
+        AppStoreService.shared.configuration = appStoreConfig
 
         initializeApiRoutes(in: router)
         initializeWebsiteRoutes(in: router)
