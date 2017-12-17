@@ -23,8 +23,7 @@ func initializeApiRoutes(in router: Router) {
         var data = Data()
         _ = try request.read(into: &data)
 
-        try AppStoreService.shared.verify(receipt: data, in: .sandbox) { result in
-            print(result)
+        AppStoreService.shared.fetchVerified(receipt: data) { result in
             try? response
                 .send(json: [
                     "state": "LOCKED",
