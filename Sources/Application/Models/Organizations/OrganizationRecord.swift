@@ -9,12 +9,12 @@
 import Foundation
 import OpenCloudKit
 
-public struct OrganizationRecord {
+struct OrganizationRecord {
     enum Keys: String {
         case apiUrl, authenticationRealm, title, iconThumbnail, icon
     }
 
-    public static let recordType: String = "Organization"
+    static let recordType: String = "Organization"
 
     let recordId: CKRecordID
 
@@ -22,7 +22,7 @@ public struct OrganizationRecord {
 
     let authenticationRealm: String
 
-    public let title: String
+    let title: String
 
     private let iconUrl: URL?
 

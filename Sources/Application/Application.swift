@@ -19,9 +19,7 @@ public final class App {
 
     // MARK: - Life Cycle
 
-    public init() throws {}
-
-    func postInit() throws {
+    public init() throws {
         router.setDefault(templateEngine: StencilTemplateEngine())
         router.all("/static", middleware: StaticFileServer(path: "./Views/static"))
 
@@ -33,8 +31,7 @@ public final class App {
         initializeWebsiteRoutes(in: self)
     }
 
-    public func run() throws {
-        try postInit()
+    public func run() {
         Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
         Kitura.run()
     }

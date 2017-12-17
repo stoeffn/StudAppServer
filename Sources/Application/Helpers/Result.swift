@@ -7,7 +7,7 @@
 //
 
 /// Closure, usually a completion handler, that receives a result of the desired type or an error.
-public typealias ResultHandler<Value> = (Result<Value>) -> Void
+typealias ResultHandler<Value> = (Result<Value>) -> Void
 
 /// Container for either a value or an optional error.
 ///
@@ -16,7 +16,7 @@ public typealias ResultHandler<Value> = (Result<Value>) -> Void
 ///
 /// - success: Implies that an operation succeeded with a return value.
 /// - failure: Implies that an operation failed with an optional error.
-public enum Result<Value> {
+enum Result<Value> {
     case failure(Error?)
     case success(Value)
 
@@ -34,7 +34,7 @@ public enum Result<Value> {
     }
 
     /// Returns whether self is `success`.
-    public var isSuccess: Bool {
+    var isSuccess: Bool {
         switch self {
         case .success: return true
         case .failure: return false
@@ -42,12 +42,12 @@ public enum Result<Value> {
     }
 
     /// Returns `true` if the result is a failure, `false` otherwise.
-    public var isFailure: Bool {
+    var isFailure: Bool {
         return !isSuccess
     }
 
     /// Returns the associated error if attached, `nil` otherwise.
-    public var error: Error? {
+    var error: Error? {
         switch self {
         case .success: return nil
         case let .failure(error): return error
@@ -55,7 +55,7 @@ public enum Result<Value> {
     }
 
     /// Returns the associated value if the result is a success, `nil` otherwise.
-    public var value: Value? {
+    var value: Value? {
         switch self {
         case let .success(value): return value
         case .failure: return nil
