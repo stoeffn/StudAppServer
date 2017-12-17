@@ -24,3 +24,7 @@ Package.resolved
 
 ### Keys ###
 *.pem
+
+### Configuration Files ###
+CloudKitConfiguration.json
+AppStoreConfiguration.json
