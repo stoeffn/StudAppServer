@@ -28,34 +28,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "HeliumLogger::HeliumLogger"
-               BuildableName = "HeliumLogger.framework"
-               BlueprintName = "HeliumLogger"
-               ReferencedContainer = "container:StudAppServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "StudAppServer::Application"
-               BuildableName = "Application.framework"
-               BlueprintName = "Application"
-               ReferencedContainer = "container:StudAppServer.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "OpenCloudKit::OpenCloudKit"
                BuildableName = "OpenCloudKit.framework"
                BlueprintName = "OpenCloudKit"
@@ -462,6 +434,20 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
+               BlueprintIdentifier = "HeliumLogger::HeliumLogger"
+               BuildableName = "HeliumLogger.framework"
+               BlueprintName = "HeliumLogger"
+               ReferencedContainer = "container:StudAppServer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
                BlueprintIdentifier = "Kitura::Kitura"
                BuildableName = "Kitura.framework"
                BlueprintName = "Kitura"
@@ -579,9 +565,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "StudAppServer::ApplicationTests"
-               BuildableName = "ApplicationTests.xctest"
-               BlueprintName = "ApplicationTests"
+               BlueprintIdentifier = "StudAppServer::StudAppServerTests"
+               BuildableName = "StudAppServerTests.xctest"
+               BlueprintName = "StudAppServerTests"
                ReferencedContainer = "container:StudAppServer.xcodeproj">
             </BuildableReference>
          </TestableReference>

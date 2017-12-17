@@ -1,6 +1,6 @@
 import XCTest
 
-@testable import ApplicationTests
+@testable import StudAppServerTests
 
 XCTMain([
     testCase(RouteTests.allTests),
