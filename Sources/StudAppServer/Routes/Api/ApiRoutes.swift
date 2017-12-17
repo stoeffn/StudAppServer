@@ -21,13 +21,15 @@ func initializeApiRoutes(in router: Router) {
 
     router.post("\(apiPath)/verify-receipt") { request, response, _ in
         var data = Data()
-        let length = try request.read(into: &data)
+        _ = try request.read(into: &data)
 
-        try response
-            .send(json: [
-                "length": length,
-                "state": "LOCKED"
-            ])
-            .end()
+        try AppStoreService.shared.verify(receipt: data, in: .sandbox) { result in
+            print(result)
+            try? response
+                .send(json: [
+                    "state": "LOCKED",
+                ])
+                .end()
+        }
     }
 }

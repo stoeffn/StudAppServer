@@ -8,7 +8,7 @@
 struct ReceiptResponse: Codable {
     let statusCode: Int
 
-    let appReceipt: AppReceipt
+    let appReceipt: AppReceipt?
 
     let latestInAppReceipts: [InAppReceipt]?
 

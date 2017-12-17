@@ -8,15 +8,21 @@
 import Foundation
 
 struct ReceiptRequest: Codable {
-    let receiptData: Data
+    let receipt: Data
 
     let sharedSecret: String?
 
     let excludesOldTransactions: Bool
 
     enum CodingKeys: String, CodingKey {
-        case receiptData = "receipt-data"
+        case receipt = "receipt-data"
         case sharedSecret = "password"
         case excludesOldTransactions = "exclude-old-transactions"
+    }
+
+    init(receipt: Data, sharedSecret: String? = nil, excludesOldTransactions: Bool = false) {
+        self.receipt = receipt
+        self.sharedSecret = sharedSecret
+        self.excludesOldTransactions = excludesOldTransactions
     }
 }
