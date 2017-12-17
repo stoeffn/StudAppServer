@@ -15,7 +15,7 @@ func initializeApiRoutes(in app: App) {
         let length = try request.read(into: &data)
         try response
             .send(json: [
-                "length": length
+                "length": length,
             ])
             .end()
     }

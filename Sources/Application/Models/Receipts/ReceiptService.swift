@@ -13,7 +13,6 @@ final class ReceiptService {
         case production
     }
 
-    func verify(receipt: Data, in environment: Environment, handler: @escaping ResultHandler<AppReceipt>) {
-
+    func verify(receipt _: Data, in _: Environment, handler _: @escaping ResultHandler<AppReceipt>) {
     }
 }

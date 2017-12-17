@@ -280,9 +280,23 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "KituraRequest::KituraRequest"
-               BuildableName = "KituraRequest.framework"
-               BlueprintName = "KituraRequest"
+               BlueprintIdentifier = "SwiftyRequest::SwiftyRequest"
+               BuildableName = "SwiftyRequest.framework"
+               BlueprintName = "SwiftyRequest"
+               ReferencedContainer = "container:StudAppServer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CircuitBreaker::CircuitBreaker"
+               BuildableName = "CircuitBreaker.framework"
+               BlueprintName = "CircuitBreaker"
                ReferencedContainer = "container:StudAppServer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -423,6 +437,20 @@
                BlueprintIdentifier = "Configuration::Configuration"
                BuildableName = "Configuration.framework"
                BlueprintName = "Configuration"
+               ReferencedContainer = "container:StudAppServer.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FileKit::FileKit"
+               BuildableName = "FileKit.framework"
+               BlueprintName = "FileKit"
                ReferencedContainer = "container:StudAppServer.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
