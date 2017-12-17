@@ -56,8 +56,6 @@ func initializeApiRoutes(in router: Router) {
                 responseJson["state"] = "LOCKED"
             }
 
-            print(responseJson)
-
             try? response
                 .send(json: responseJson)
                 .end()
