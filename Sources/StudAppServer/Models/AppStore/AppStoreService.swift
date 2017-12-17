@@ -34,13 +34,21 @@ final class AppStoreService {
 
     private lazy var session = URLSession.shared
 
+    private lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd HH:mm:ss 'Etc/'ZZZZ"
+        return formatter
+    }()
+
     private lazy var encoder: JSONEncoder = {
         let encoder = JSONEncoder()
+        encoder.dateEncodingStrategy = .formatted(dateFormatter)
         return encoder
     }()
 
     private lazy var decoder: JSONDecoder = {
         let decoder = JSONDecoder()
+        decoder.dateDecodingStrategy = .formatted(dateFormatter)
         return decoder
     }()
 

@@ -18,14 +18,11 @@ struct AppReceipt: Codable {
 
     let createdAt: Date
 
-    let expiresAt: Date
-
     enum CodingKeys: String, CodingKey {
         case bundleId = "bundle_id"
         case appVersion = "application_version"
         case originalAppVersion = "original_application_version"
         case inAppReceipts = "in_app"
-        case createdAt = "creation_date"
-        case expiresAt = "expiration_date"
+        case createdAt = "receipt_creation_date"
     }
 }
