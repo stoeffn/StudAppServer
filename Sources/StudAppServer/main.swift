@@ -1,7 +1,6 @@
 import Foundation
 import LoggerAPI
 import HeliumLogger
-import Application
 
 do {
     HeliumLogger.use(LoggerMessageType.info)

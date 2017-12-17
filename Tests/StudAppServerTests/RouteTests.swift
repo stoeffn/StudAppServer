@@ -5,7 +5,7 @@ import XCTest
 import HeliumLogger
 import LoggerAPI
 
-@testable import Application
+@testable import StudAppServer
 
 final class RouteTests: XCTestCase {
     static var port: Int!
@@ -26,7 +26,6 @@ final class RouteTests: XCTestCase {
 
             let app = try App()
             RouteTests.port = app.cloudEnv.port
-            try app.postInit()
             Kitura.addHTTPServer(onPort: RouteTests.port, with: app.router)
             Kitura.start()
         } catch {
@@ -42,18 +41,17 @@ final class RouteTests: XCTestCase {
     func testGetStatic() {
         let printExpectation = expectation(description: "The /route will serve static HTML content.")
 
-        URLRequest(forTestWithMethod: "GET")?
-            .sendForTestingWithKitura { data, statusCode in
-                if let getResult = String(data: data, encoding: String.Encoding.utf8) {
-                    XCTAssertEqual(statusCode, 200)
-                    XCTAssertTrue(getResult.contains("<html>"))
-                    XCTAssertTrue(getResult.contains("</html>"))
-                } else {
-                    XCTFail("Return value from / was nil!")
-                }
-
-                printExpectation.fulfill()
+        URLRequest(forTestWithMethod: "GET")?.sendForTestingWithKitura { data, statusCode in
+            if let getResult = String(data: data, encoding: String.Encoding.utf8) {
+                XCTAssertEqual(statusCode, 200)
+                XCTAssertTrue(getResult.contains("<html>"))
+                XCTAssertTrue(getResult.contains("</html>"))
+            } else {
+                XCTFail("Return value from / was nil!")
             }
+
+            printExpectation.fulfill()
+        }
 
         waitForExpectations(timeout: 10.0, handler: nil)
     }
@@ -70,7 +68,7 @@ private extension URLRequest {
                 httpBody = body
             }
         } else {
-            XCTFail("URL is nil...")
+            XCTFail("URL is nil…")
             return nil
         }
     }
