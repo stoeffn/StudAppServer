@@ -25,16 +25,16 @@
         <details>
             <summary>Welche Anforderungen hat StudApp?</summary>
             <p>
-                StudApp funktioniert auf jeden iPhone, iPad und iPod touch, auf dem iOS 11 läuft. Außerdem benötigst Du natürlich eine Internetverbindung, um auf das Stud.IP Deiner Organisation zugreifen zu können.
+                StudApp funktioniert auf jeden iPhone, iPad und iPod touch, auf dem mindestens iOS 10 läuft. Außerdem benötigst Du natürlich eine Internetverbindung, um auf das Stud.IP Deiner Organisation zugreifen zu können.
             </p>
             <p>
                 Zur Benutzung der App brauchst du auch einen Stud.IP-Zugang bei einer unterstützten Organisation. Falls Deine Organisation noch nicht dabei ist, kannst Du helfen sie hinzuzufügen! Schreibe dafür einfach eine E-Mail an <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a>.
             </p>
         </details>
         <details>
-            <summary>Wieso benötigt StudApp iOS 11?</summary>
+            <summary>Hat es Vorteile, StudApp unter iOS 11 zu verwenden?</summary>
             <p>
-                Ganz einfach: StudApp verwendet eine Integration in die <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, die neu in iOS 11 ist. Und da die Dateien-Funktion die Hauptbetsandteil von StudApp ist, könnte man unter iOS 10 kaum kaum etwas mit ihr machen.
+                Auf jeden Fall: StudApp verwendet eine Integration in die <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, die neu in iOS 11 ist. Und da die Dateien-Funktion die Hauptbestandteil von StudApp ist, erleichert es die Arbeit—vor allem auf dem iPad—ungemein.
             </p>
         </details>
         <details>
@@ -98,23 +98,40 @@
     </section>
 
     <section>
+        <h2>Semester</h2>
+        <details>
+            <summary>Wieso lassen sich einzelne Semester aktivieren oder deaktiveren und welche Auswirkung hat das?</summary>
+            <p>
+                Ziel von StudApp ist auch, eine möglichst einfache Benutzerberfläche zu bieten. Und da man häufig nur wenige Semester benötigt (z.B. das aktuelle und gelegentlich das vorherige), kann man die, die nicht gebraucht werden, weil sie zum Beispiel in der Zukunft liegen, einfach ausblenden. Nur diese werden dann in der Dateien-App angezeigt. Keine Angst: Downloads verschwinden auf diese Weise nicht. Standardmäßig ist nur das aktuelle Semester aktiv.
+            </p>
+        </details>
+    </section>
+
+    <section>
+        <h2>Kurse</h2>
+        <details>
+            <summary>Wie kann ich meine Kurse organisieren?</summary>
+            <p>
+                Kurse werden automatisch nach Semestern gruppiert, die du in der App ein- und ausklappen kannst.
+            </p>
+            <p>
+                Um Kurse leichter erkennen zu können, kannst Du ihnen im Menu oder unter iOS 11 auch per Wischgeste eine der offiziellen Stud.IP-Farben geben. Die Kursliste wird dann sogar automatisch nach Farbgruppen sortiert! Das ist ziemlich praktisch, um z.B. Vorlesung und Übung zu eienr Veranstaltung immer zusammen zu haben.
+            </p>
+        </details>
+    </section>
+
+    <section>
         <h2>Dateien</h2>
         <details>
             <summary>Wie kann ich Dateien aus Stud.IP in StudApp einsehen?</summary>
             <p>
-                Öffne einfach die neue <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>. Dort kannst du Stud.IP als Dateianbieter aktivieren und dann genau so einfach wie bei z.B. iCloud auf Stud.IP-Dateien und -Dokumente zugreifen.
+                Durchsuche entweder Deine Kurse oder öffne einfach die neue <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, wenn Du bereits iOS 11 verwendest. Dort kannst du Stud.IP als Dateianbieter aktivieren und dann genau so einfach wie bei z.B. iCloud auf Stud.IP-Dateien und -Dokumente zugreifen.
             </p>
         </details>
         <details>
-            <summary>Wie sind die Dokumente organisiert?</summary>
+            <summary>Wie sind die Dokumente in der Dateien-App organisiert?</summary>
             <p>
                 Im Stud.IP-Ordner findest du alle Semester, die Du in der App aktiviert hast. Standardmäßig ist dies nur das aktuelle Semester. Innerhalb der Semesterordner findest du die Veranstaltungen des jeweiligen Semesters, in denen wiederum die Unterordner und Dokumenter der Veranstaltung zu finden sind.
-            </p>
-        </details>
-        <details>
-            <summary>Wieso wird ein Semester oder Veranstaltung ohne Inhalt angezeigt?</summary>
-            <p>
-                Falls beim ersten Öffnen eines Semesters oder Kurses keine Internetverbindung verfügbar war, konnten vermutlich keine Daten geladen werden. Du kannst einen Ordner einfach nochmal öffnen, um ihn zu aktualisieren.
             </p>
         </details>
         <details>
@@ -155,16 +172,6 @@
             </p>
             <p>
                 Außerdem bietet StudApp eine Suche für heruntergelade Dateien, die nicht nur Dokument-Titel, sondern auch Kurs und Uploader berücksichtigt.
-            </p>
-        </details>
-    </section>
-
-    <section>
-        <h2>Semester</h2>
-        <details>
-            <summary>Wieso lassen sich einzelne Semester aktivieren oder deaktiveren und welche Auswirkung hat das?</summary>
-            <p>
-                Ziel von StudApp ist auch, eine möglichst einfache Benutzerberfläche zu bieten. Und da man häufig nur wenige Semester benötigt, kann man die, die nicht gebraucht werden, weil sie zum Beispiel in der Zukunft liegen, einfach ausblenden. Nur diese werden dann in der Dateien-App angezeigt. Keine Angst: Downloads verschwinden auf diese Weise nicht. Standardmäßig ist nur das aktuelle Semester aktiv.
             </p>
         </details>
     </section>
