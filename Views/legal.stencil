@@ -3,12 +3,10 @@
 {% block title %}StudApp—Impressum{% endblock %}
 
 {% block navigationTitle %}
-    <a href="/"><img src="/static/img/AppIcon.svg" /> StudApp</a>
+    <a href="/">StudApp</a>
 {% endblock %}
 
-{% block navigationLinks %}
-    {% include "navigationLinks.stencil" %}
-{% endblock %}
+{% block navigationLinks %}{% endblock %}
 
 {% block main %}
     <h1>Impressum</h1>

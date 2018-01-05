@@ -1,0 +1,14 @@
+.placeholder-section {
+    text-align: center;
+}
+.placeholder-section h1 {
+    margin-bottom: 8px;
+}
+.placeholder-section h3 {
+    margin-top: 0;
+    margin-bottom: 64px;
+}
+.placeholder-section h2 {
+    margin-bottom: 128px;
+    font-weight: normal;
+}
