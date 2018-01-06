@@ -24,9 +24,9 @@ struct OrganizationRecord {
 
     let title: String
 
-    private let iconUrl: URL?
+    private let iconUrl: NSURL?
 
-    private let iconThumbnailUrl: URL
+    private let iconThumbnailUrl: NSURL
 }
 
 extension OrganizationRecord {
@@ -43,8 +43,8 @@ extension OrganizationRecord {
         self.apiUrl = apiUrl
         self.authenticationRealm = authenticationRealm
         self.title = title
-        iconUrl = iconAsset?.fileURL as URL?
-        iconThumbnailUrl = iconThumbnailAsset.fileURL as URL
+        iconUrl = iconAsset?.fileURL
+        iconThumbnailUrl = iconThumbnailAsset.fileURL
     }
 }
 
