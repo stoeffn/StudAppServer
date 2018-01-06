@@ -63,7 +63,6 @@ final class AppStoreService {
 
     func fetchVerified(receipt: Data, in environment: Environments, handler: @escaping ResultHandler<ReceiptResponse>) {
         guard !receipt.isEmpty else {
-            print("Empty receipt")
             return handler(.failure(Errors.emptyReceipt))
         }
 
@@ -75,7 +74,6 @@ final class AppStoreService {
             request.httpMethod = "POST"
             request.httpBody = encodedRequestBody
 
-            print("Start request")
             let task = session.dataTask(with: request) { data, response, error in
                 print(String(data: data ?? Data(), encoding: .utf8) ?? "")
 
@@ -85,7 +83,6 @@ final class AppStoreService {
                     let response = response as? HTTPURLResponse,
                     200 ... 299 ~= response.statusCode
                 else {
-                    print("Failure")
                     let result = Result<ReceiptResponse>.failure(error ?? Errors.unknown)
                     return handler(result)
                 }
@@ -109,7 +106,6 @@ final class AppStoreService {
         fetchVerified(receipt: receipt, in: .production) { result in
             guard result.value?.statusCode == 21007 else { return handler(result) }
 
-            print("Sandbox")
             self.fetchVerified(receipt: receipt, in: .sandbox, handler: handler)
         }
     }

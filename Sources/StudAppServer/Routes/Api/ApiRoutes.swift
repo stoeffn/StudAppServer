@@ -29,7 +29,7 @@ func initializeApiRoutes(in router: Router) {
             !receipt.isEmpty
         else {
             try response
-                .send(json: ["state": "LOCKED"])
+                .send(json: ["state": "UNKNOWN"])
                 .end()
             return
         }
