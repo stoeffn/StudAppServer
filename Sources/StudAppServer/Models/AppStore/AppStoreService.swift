@@ -22,10 +22,19 @@ final class AppStoreService {
         }
     }
 
-    enum Errors: String, Error {
+    enum Errors: String, LocalizedError {
         case emptyReceipt
 
         case unknown
+
+        var localizedDescription: String {
+            switch self {
+            case .emptyReceipt:
+                return "No receipt was found."
+            case .unknown:
+                return "An unknown error occured"
+            }
+        }
     }
 
     static let shared = AppStoreService()
