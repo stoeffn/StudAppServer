@@ -23,28 +23,21 @@ func initializeApiRoutes(in router: Router) {
 
     router.post("\(apiPath)/verify-receipt", middleware: BodyParser())
     router.post("\(apiPath)/verify-receipt") { request, response, _ in
-        print("Start")
         guard
             let body = request.body,
-            case let .raw(receipt) = body
+            case let .raw(receipt) = body,
+            !receipt.isEmpty
         else {
-            print("Error")
             try response
-                .send(json: [
-                    "error": AppStoreService.Errors.emptyReceipt,
-                ])
+                .send(json: ["state": "LOCKED"])
                 .end()
             return
         }
 
-        print("Service")
         AppStoreService.shared.fetchVerified(receipt: receipt) { result in
-            print("Service Error")
             guard let receiptResponse = result.value else {
                 try? response
-                    .send(json: [
-                        "error": result.error?.localizedDescription,
-                    ])
+                    .send(json: ["state": "UNKNOWN"])
                     .end()
                 return
             }
@@ -63,9 +56,9 @@ func initializeApiRoutes(in router: Router) {
 
             if isUnlocked {
                 responseJson["state"] = "UNLOCKED"
-            } else if subscribedUntil != nil {
+            } else if let subscribedUntil = subscribedUntil {
                 responseJson["state"] = "SUBSCRIBED"
-                responseJson["subscribedUntil"] = subscribedUntil?.timeIntervalSince1970
+                responseJson["subscribedUntil"] = subscribedUntil.timeIntervalSince1970
             } else {
                 responseJson["state"] = "LOCKED"
             }
