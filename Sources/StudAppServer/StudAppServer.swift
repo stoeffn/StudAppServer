@@ -37,6 +37,7 @@ public final class StudAppServer {
 
     public func run() {
         Kitura.addHTTPServer(onPort: cloudEnv.port, with: router)
+        Kitura.addFastCGIServer(onPort: cloudEnv.port + 1, with: router)
         Kitura.run()
     }
 }
