@@ -23,10 +23,12 @@ func initializeApiRoutes(in router: Router) {
 
     router.post("\(apiPath)/verify-receipt", middleware: BodyParser())
     router.post("\(apiPath)/verify-receipt") { request, response, _ in
+        print("Start")
         guard
             let body = request.body,
             case let .raw(receipt) = body
         else {
+            print("Error")
             try response
                 .send(json: [
                     "error": AppStoreService.Errors.emptyReceipt,
@@ -35,7 +37,9 @@ func initializeApiRoutes(in router: Router) {
             return
         }
 
+        print("Service")
         AppStoreService.shared.fetchVerified(receipt: receipt) { result in
+            print("Service Error")
             guard let receiptResponse = result.value else {
                 try? response
                     .send(json: [
