@@ -32,7 +32,7 @@ final class AppStoreService {
 
     lazy var configuration = AppStoreConfig()
 
-    private lazy var session = URLSession.shared
+    private lazy var session = URLSession(configuration: URLSessionConfiguration.default)
 
     private lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
