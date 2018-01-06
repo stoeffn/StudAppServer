@@ -12,7 +12,7 @@ let package = Package(
         .package(url: "https://github.com/IBM-Swift/Health.git", from: "1.0.0"),
         .package(url: "https://github.com/IBM-Swift/Kitura-StencilTemplateEngine.git", .upToNextMinor(from: "1.8.4")),
         .package(url: "https://github.com/RuntimeTools/SwiftMetrics.git", from: "2.0.0"),
-        .package(url: "https://github.com/BennyKJohnson/OpenCloudKit.git", .upToNextMinor(from: "0.5.9")),
+        .package(url: "https://github.com/olutsenko/OpenCloudKit.git", .upToNextMinor(from: "0.5.3")),
     ],
     targets: [
         .target(name: "StudAppServer", dependencies: [
