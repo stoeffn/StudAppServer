@@ -26,7 +26,10 @@ func initializeApiRoutes(in router: Router) {
         _ = try request.read(into: &receipt)
 
         AppStoreService.shared.fetchVerified(receipt: receipt) { result in
-            guard let receiptResponse = result.value else {
+            guard
+                let receiptResponse = result.value,
+                let appReceipt = receiptResponse.appReceipt
+            else {
                 try? response
                     .send(json: ["state": "UNKNOWN"])
                     .end()
@@ -34,13 +37,13 @@ func initializeApiRoutes(in router: Router) {
             }
 
             let now = Date()
-            let subscribedUntil = receiptResponse.appReceipt?.inAppReceipts
+            let subscribedUntil = appReceipt.inAppReceipts
                 .filter { $0.productId == subscriptionProductIdentifier && $0.cancelledAt == nil }
                 .flatMap { $0.subscriptionExpiresAt }
                 .filter { $0 > now }
                 .max()
 
-            let isUnlocked = receiptResponse.appReceipt?.inAppReceipts
+            let isUnlocked = appReceipt.inAppReceipts
                 .filter { $0.productId == unlockProductIdentifier && $0.cancelledAt == nil }
                 .first != nil
 
