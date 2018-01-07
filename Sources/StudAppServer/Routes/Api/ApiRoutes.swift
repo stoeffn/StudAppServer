@@ -21,18 +21,9 @@ func initializeApiRoutes(in router: Router) {
             .end()
     }
 
-    router.post("\(apiPath)/verify-receipt", middleware: BodyParser())
     router.post("\(apiPath)/verify-receipt") { request, response, _ in
-        guard
-            let body = request.body,
-            case let .raw(receipt) = body,
-            !receipt.isEmpty
-        else {
-            try response
-                .send(json: ["state": "UNKNOWN"])
-                .end()
-            return
-        }
+        var receipt = Data()
+        _ = try request.read(into: &receipt)
 
         AppStoreService.shared.fetchVerified(receipt: receipt) { result in
             guard let receiptResponse = result.value else {
@@ -42,10 +33,11 @@ func initializeApiRoutes(in router: Router) {
                 return
             }
 
+            let now = Date()
             let subscribedUntil = receiptResponse.appReceipt?.inAppReceipts
                 .filter { $0.productId == subscriptionProductIdentifier && $0.cancelledAt == nil }
                 .flatMap { $0.subscriptionExpiresAt }
-                .filter { $0 > Date() }
+                .filter { $0 > now }
                 .max()
 
             let isUnlocked = receiptResponse.appReceipt?.inAppReceipts

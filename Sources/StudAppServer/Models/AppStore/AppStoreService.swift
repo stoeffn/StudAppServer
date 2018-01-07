@@ -75,8 +75,6 @@ final class AppStoreService {
             request.httpBody = encodedRequestBody
 
             let task = session.dataTask(with: request) { data, response, error in
-                print(String(data: data ?? Data(), encoding: .utf8) ?? "")
-
                 guard
                     error == nil,
                     let encodedResponseBody = data,
