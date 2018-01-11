@@ -1,0 +1,11 @@
+{
+    "applinks": {
+        "apps": [],
+        "details": [
+            {
+                "appID": "X63VKA93X8.SteffenRyll.StudApp",
+                "paths": [ "/sign-in"]
+            }
+        ]
+    }
+}

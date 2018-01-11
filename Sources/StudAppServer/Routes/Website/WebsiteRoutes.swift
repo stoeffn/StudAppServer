@@ -30,9 +30,16 @@ func initializeWebsiteRoutes(in router: Router) {
             .end()
     }
 
-    router.get("/") { _, response, _ in
+    router.get("/robots.txt") { _, response, _ in
         try response
-            .render("index", context: [:])
+            .render("robots.txt", context: [:])
+            .end()
+    }
+
+    router.get("/apple-app-site-association") { _, response, _ in
+        response.headers.setType("application/json")
+        try response
+            .render("apple-app-site-association", context: [:])
             .end()
     }
 }
