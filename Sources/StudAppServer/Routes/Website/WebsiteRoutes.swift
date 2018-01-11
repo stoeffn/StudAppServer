@@ -24,6 +24,12 @@ func initializeWebsiteRoutes(in router: Router) {
         }
     }
 
+    router.get("/robots.txt") { _, response, _ in
+        try response
+            .render("robots.txt", context: [:])
+            .end()
+    }
+
     router.get("/") { _, response, _ in
         try response
             .render("index", context: [:])
