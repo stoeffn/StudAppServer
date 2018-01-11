@@ -39,7 +39,7 @@ func initializeWebsiteRoutes(in router: Router) {
     }
 
     router.get("/apple-app-site-association") { _, response, _ in
-        response.headers.setType("application/json")
+        response.headers.setType("json")
         try response
             .render("apple-app-site-association", context: [:])
             .end()
