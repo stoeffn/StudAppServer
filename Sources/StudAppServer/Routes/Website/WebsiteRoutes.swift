@@ -3,6 +3,12 @@ import Kitura
 import OpenCloudKit
 
 func initializeWebsiteRoutes(in router: Router) {
+    router.get("/") { _, response, _ in
+        try response
+            .render("index", context: [:])
+            .end()
+    }
+
     router.get("/privacy") { _, response, _ in
         try response
             .render("privacy", context: [:])
@@ -26,13 +32,7 @@ func initializeWebsiteRoutes(in router: Router) {
 
     router.get("/robots.txt") { _, response, _ in
         try response
-            .render("robots.txt", context: [:])
-            .end()
-    }
-
-    router.get("/robots.txt") { _, response, _ in
-        try response
-            .render("robots.txt", context: [:])
+            .render("robots", context: [:])
             .end()
     }
 
