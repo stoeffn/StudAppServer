@@ -34,9 +34,7 @@ func initializeWebsiteRoutes(in router: Router) {
 
     router.get("/sign-in/?") { request, response, _ in
         let query = request.parsedURL.query.map { "?\($0)" } ?? ""
-        try response
-            .redirect("studapp://sign-in\(query)")
-            .end()
+        try response.redirect("studapp://sign-in\(query)")
     }
 
     router.get("/robots.txt") { _, response, _ in
