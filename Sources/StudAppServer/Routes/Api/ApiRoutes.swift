@@ -13,7 +13,7 @@ private let subscriptionProductIdentifier = "SteffenRyll.StudApp.Subscription"
 private let unlockProductIdentifier = "SteffenRyll.StudApp.Unlock"
 
 func initializeApiRoutes(in router: Router) {
-    router.get("\(apiPath)/health") { _, response, _ in
+    router.get("\(apiPath)/health/?") { _, response, _ in
         let result = health.status.toSimpleDictionary()
         try response
             .status(health.status.state == .UP ? .OK : .serviceUnavailable)
@@ -21,7 +21,7 @@ func initializeApiRoutes(in router: Router) {
             .end()
     }
 
-    router.post("\(apiPath)/verify-receipt") { request, response, _ in
+    router.post("\(apiPath)/verify-receipt/?") { request, response, _ in
         var receipt = Data()
         _ = try request.read(into: &receipt)
 

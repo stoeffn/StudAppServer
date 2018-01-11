@@ -9,20 +9,20 @@ func initializeWebsiteRoutes(in router: Router) {
             .end()
     }
 
-    router.get("/legal") { _, response, _ in
+    router.get("/legal/?") { _, response, _ in
         try response
             .render("legal", context: [:])
             .end()
     }
 
     /*
-    router.get("/privacy") { _, response, _ in
+    router.get("/privacy/?") { _, response, _ in
         try response
             .render("privacy", context: [:])
             .end()
     }
 
-    router.get("/help") { _, response, _ in
+    router.get("/help/?") { _, response, _ in
         OrganizationRecord.fetch(desiredKeys: [.title, .iconThumbnail]) { result in
             let context: [String: Any] = ["organizations": result.value ?? []]
             try? response
@@ -32,7 +32,7 @@ func initializeWebsiteRoutes(in router: Router) {
     }
     */
 
-    router.get("/sign-in") { request, response, _ in
+    router.get("/sign-in/?") { request, response, _ in
         let query = request.parsedURL.query.map { "?\($0)" } ?? ""
         try response
             .redirect("studapp://sign-in\(query)")
