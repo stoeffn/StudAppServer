@@ -11,7 +11,9 @@
         </noscript>
         <script>
             window.onload = function() {
-                window.location.replace("{{ redirectUrl }}");
+                setTimeout(function() {
+                    window.location.replace("{{ redirectUrl }}");
+                }, 10);
             };
         </script>
     </body>
