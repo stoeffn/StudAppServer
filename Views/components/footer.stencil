@@ -7,5 +7,5 @@
     </ul>
 </nav>
 <p class="container footnote">
-    © Copyright Steffen Ryll, 2017
+    {{ copyrightMessage }}
 </p>
