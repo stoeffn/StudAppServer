@@ -1,7 +1,7 @@
 # The container name used for the run container
-container-name-run : "StudAppServer-swift-run"
+container-name-run : "studappserver-swift-run"
 # The container name used for the tools container
-container-name-tools : "StudAppServer-swift-tools"
+container-name-tools : "studappserver-swift-tools"
 
 # The project root on the host for the run container to mount to container-path-run
 host-path-run : "."
@@ -24,9 +24,9 @@ dockerfile-run : "Dockerfile"
 dockerfile-tools : "Dockerfile-tools"
 
 # The name of image to create from dockerfile-run
-image-name-run : "StudAppServer-swift-run"
+image-name-run : "studappserver-swift-run"
 # The name of image to create from dockerfile-tools
-image-name-tools : "StudAppServer-swift-tools"
+image-name-tools : "studappserver-swift-tools"
 
 # The command to build the code and docker image for RUN
 build-cmd-run : "/swift-utils/tools-utils.sh build release"
@@ -38,7 +38,7 @@ build-cmd-debug : "/swift-utils/tools-utils.sh build debug"
 # The command to run the code in the run container
 run-cmd : ""
 # The command to execute debug of the code in the tools container
-debug-cmd : "/swift-utils/tools-utils.sh debug Stoeffn 1024"
+debug-cmd : "/swift-utils/tools-utils.sh debug StudAppServer 1024"
 # The command to stop the code
 stop-cmd : ""
 

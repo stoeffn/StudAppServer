@@ -1,0 +1,22 @@
+{% extends "base.stencil" %}
+
+{% block title %}StudApp{% endblock %}
+
+{% block css %}
+    <link href="/static/css/placeholder.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block body %}
+    <main>
+        <div class="container">
+            <section class="placeholder-section">
+                <h1>StudApp</h1>
+                <h3>Stud.IP unterwegs.</h3>
+                <h2>Coming Soon</h2>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">
+        {% include "components/footer.stencil" %}
+    </footer>
+{% endblock %}

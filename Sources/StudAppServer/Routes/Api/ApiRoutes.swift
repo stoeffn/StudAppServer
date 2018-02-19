@@ -13,7 +13,7 @@ private let subscriptionProductIdentifier = "SteffenRyll.StudApp.Subscription"
 private let unlockProductIdentifier = "SteffenRyll.StudApp.Unlock"
 
 func initializeApiRoutes(in router: Router) {
-    router.get("\(apiPath)/health") { _, response, _ in
+    router.get("\(apiPath)/health/?") { _, response, _ in
         let result = health.status.toSimpleDictionary()
         try response
             .status(health.status.state == .UP ? .OK : .serviceUnavailable)
@@ -21,27 +21,29 @@ func initializeApiRoutes(in router: Router) {
             .end()
     }
 
-    router.post("\(apiPath)/verify-receipt") { request, response, _ in
-        var data = Data()
-        _ = try request.read(into: &data)
+    router.post("\(apiPath)/verify-receipt/?") { request, response, _ in
+        var receipt = Data()
+        _ = try request.read(into: &receipt)
 
-        AppStoreService.shared.fetchVerified(receipt: data) { result in
-            guard let receiptResponse = result.value else {
+        AppStoreService.shared.fetchVerified(receipt: receipt) { result in
+            guard
+                let receiptResponse = result.value,
+                let appReceipt = receiptResponse.appReceipt
+            else {
                 try? response
-                    .send(json: [
-                        "error": result.error?.localizedDescription,
-                    ])
+                    .send(json: ["state": "UNKNOWN"])
                     .end()
                 return
             }
 
-            let subscribedUntil = receiptResponse.appReceipt?.inAppReceipts
+            let now = Date()
+            let subscribedUntil = appReceipt.inAppReceipts
                 .filter { $0.productId == subscriptionProductIdentifier && $0.cancelledAt == nil }
                 .flatMap { $0.subscriptionExpiresAt }
-                .filter { $0 > Date() }
+                .filter { $0 > now }
                 .max()
 
-            let isUnlocked = receiptResponse.appReceipt?.inAppReceipts
+            let isUnlocked = appReceipt.inAppReceipts
                 .filter { $0.productId == unlockProductIdentifier && $0.cancelledAt == nil }
                 .first != nil
 
@@ -49,9 +51,9 @@ func initializeApiRoutes(in router: Router) {
 
             if isUnlocked {
                 responseJson["state"] = "UNLOCKED"
-            } else if subscribedUntil != nil {
+            } else if let subscribedUntil = subscribedUntil {
                 responseJson["state"] = "SUBSCRIBED"
-                responseJson["subscribedUntil"] = subscribedUntil?.timeIntervalSince1970
+                responseJson["subscribedUntil"] = subscribedUntil.timeIntervalSince1970
             } else {
                 responseJson["state"] = "LOCKED"
             }
