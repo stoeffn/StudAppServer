@@ -2,13 +2,18 @@
     margin-left: 42px;
 }
 .organization-list img {
-    margin-bottom: -6px;
+    margin: 8px;
+    margin-bottom: -8px;
+    margin-right: 4px;
     width: 32px;
     height: 32px;
 }
 .organization-list h3 {
     margin: 0;
     margin-left: 8px;
+
+    font-weight: normal;
+
     display: inline-block;
 }
 

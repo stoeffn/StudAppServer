@@ -3,7 +3,7 @@
 {% block title %}StudApp—Impressum{% endblock %}
 
 {% block navigationTitle %}
-    <a href="/">StudApp</a>
+    <a href="/"><img src="/static/img/AppIcon.svg" /> StudApp</a>
 {% endblock %}
 
 {% block navigationLinks %}{% endblock %}

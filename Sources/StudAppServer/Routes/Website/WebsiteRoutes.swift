@@ -5,7 +5,7 @@ import OpenCloudKit
 func initializeWebsiteRoutes(in router: Router) {
     router.get("/") { _, response, _ in
         try response
-            .render("placeholder", context: [:])
+            .render("studapp", context: [:])
             .end()
     }
 
@@ -15,7 +15,6 @@ func initializeWebsiteRoutes(in router: Router) {
             .end()
     }
 
-    /*
     router.get("/privacy/?") { _, response, _ in
         try response
             .render("privacy", context: [:])
@@ -30,7 +29,6 @@ func initializeWebsiteRoutes(in router: Router) {
                 .end()
         }
     }
-    */
 
     router.get("/sign-in/?") { request, response, _ in
         let query = request.parsedURL.query.map { "?\($0)" } ?? ""
