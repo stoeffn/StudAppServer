@@ -1,16 +1,17 @@
-import Foundation
-import Kitura
-import LoggerAPI
-import Configuration
 import CloudEnvironment
-import KituraContracts
+import Configuration
+import Foundation
 import Health
+import Kitura
+import KituraContracts
 import KituraStencil
+import LoggerAPI
 import OpenCloudKit
 
 public let health = Health()
 
 public final class StudAppServer {
+
     // MARK: - Kitura
 
     let router = Router()

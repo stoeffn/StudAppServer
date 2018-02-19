@@ -1,8 +1,8 @@
 import Kitura
+import LoggerAPI
 import SwiftMetrics
 import SwiftMetricsDash
 import SwiftMetricsPrometheus
-import LoggerAPI
 
 private var swiftMetrics: SwiftMetrics?
 private var swiftMetricsDash: SwiftMetricsDash?

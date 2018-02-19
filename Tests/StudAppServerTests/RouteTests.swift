@@ -1,11 +1,10 @@
 import Foundation
+import HeliumLogger
 import Kitura
 import KituraNet
-import XCTest
-import HeliumLogger
 import LoggerAPI
-
 @testable import StudAppServer
+import XCTest
 
 final class RouteTests: XCTestCase {
     static var port: Int!

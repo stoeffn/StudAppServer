@@ -1,6 +1,6 @@
 import Foundation
-import LoggerAPI
 import HeliumLogger
+import LoggerAPI
 
 HeliumLogger.use(LoggerMessageType.info)
 

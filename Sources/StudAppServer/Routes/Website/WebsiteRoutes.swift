@@ -30,7 +30,7 @@ func initializeWebsiteRoutes(in router: Router) {
         OrganizationRecord.fetch(desiredKeys: [.title, .iconThumbnail]) { result in
             let context: [String: Any] = [
                 "copyrightMessage": copyrightMessage,
-                "organizations": result.value ?? []
+                "organizations": result.value ?? [],
             ]
             try? response
                 .render("help", context: context)
