@@ -33,7 +33,7 @@
             Mit StudApp is es einfacher denn je, auf Deine Veranstaltungen, Dokumente und Ankündigungen aus Stud.IP zuzugreifen: Als offiziell durch den Stud.IP e.V. zertifizierte App bietet sie Dir hervorragende Möglichkeiten, immer auf dem aktuellen Stand zu bleiben.
         </p>
 
-        <a href="#" class="app-store-link">
+        <a href="https://itunes.apple.com/us/app/studapp/id1317593772?ls=1&mt=8" class="app-store-link">
             <img src="/static/img/AppStoreBadge.svg" alt="Im App Store herunterladen" />
         </a>
 
