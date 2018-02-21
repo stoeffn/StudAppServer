@@ -61,21 +61,12 @@
             </p>
         </details>
         <details>
-            <summary>Wie viel kostet StudApp?</summary>
+            <summary>Ist StudApp kostenlos?</summary>
             <p>
-                Nachdem Du Dich angemeldet hast und damit bestätigt wurde, dass Dein Stud.IP-Account funktioniert, hast du zwei Optionen:
+                Ja!
             </p>
             <p>
-                Entweder bezahlst Du einen kleinen Betrag pro Semester oder einfach einmalig. Wähle, was Dir am besten passt. Dabei kannst Du die App natürlich vorher kostenlos testen.
-            </p>
-        </details>
-        <details>
-            <summary>Kann ich StudApp auf all meinen Gerät mit jedem Stud.IP-Account verwenden?</summary>
-            <p>
-                Natürlich! Einmal gekauft steht Dir StudApp auf allen Geräten zur Verfügung, auf denen Du mit Deinem iTunes-Account angemeldet bist. Mit der Familienfreigabe gilt das sogar für bis zu fünf weitere Personen. Eventuell musst Du auf "Kauf wiederherstellen" tippen.
-            </p>
-            <p>
-                Es ist außerdem egal, an welchem Stud.IP Du Dich mit welchem Account anmeldest—Dein Kauf ist davon unabhängig.
+                Falls Dir StudApp gefällt und Du die Weiterentwicklung unterstützen möchtest, würde ich mich über ein kleines Trinkgeld freuen—die Option dafür findest Du unter "Über".
             </p>
         </details>
     </section>
@@ -126,14 +117,14 @@
     </section>
 
     <section>
-        <h2>Kurse</h2>
+        <h2>Veranstaltungen</h2>
         <details>
-            <summary>Wie kann ich meine Kurse organisieren?</summary>
+            <summary>Wie kann ich meine Veranstaltungen organisieren?</summary>
             <p>
-                Kurse werden automatisch nach Semestern gruppiert, die du in der App ein- und ausklappen kannst.
+                Veranstaltungen werden automatisch nach Semestern gruppiert, die du in der App ein- und ausklappen kannst.
             </p>
             <p>
-                Um Kurse leichter erkennen zu können, kannst Du ihnen im Menu oder unter iOS 11 auch per Wischgeste eine der offiziellen Stud.IP-Farben geben. Die Kursliste wird dann sogar automatisch nach Farbgruppen sortiert! Das ist ziemlich praktisch, um z.B. Vorlesung und Übung zu eienr Veranstaltung immer zusammen zu haben.
+                Um Veranstaltungen leichter erkennen zu können, kannst Du ihnen im Menu oder unter iOS 11 auch per Wischgeste eine der offiziellen Stud.IP-Farben geben. Die Veranstaltungsliste wird dann sogar automatisch nach Farbgruppen sortiert! Das ist ziemlich praktisch, um z.B. Vorlesung und Übung zu eienr Veranstaltung immer zusammen zu haben.
             </p>
         </details>
     </section>
@@ -143,13 +134,13 @@
         <details>
             <summary>Wie kann ich Dateien aus Stud.IP in StudApp einsehen?</summary>
             <p>
-                Durchsuche entweder Deine Kurse oder öffne einfach die neue <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, wenn Du bereits iOS 11 verwendest. Dort kannst du Stud.IP als Dateianbieter aktivieren und dann genau so einfach wie bei z.B. iCloud auf Stud.IP-Dateien und -Dokumente zugreifen.
+                Durchsuche entweder Deine Veranstaltungen oder öffne einfach die neue <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, wenn Du bereits iOS 11 verwendest. Dort kannst du Stud.IP als Dateianbieter aktivieren und dann genau so einfach wie bei z.B. iCloud auf Stud.IP-Dateien und -Dokumente zugreifen.
             </p>
         </details>
         <details>
             <summary>Wie sind die Dokumente in der Dateien-App organisiert?</summary>
             <p>
-                Im Stud.IP-Ordner findest du alle Semester, die Du in der App aktiviert hast. Standardmäßig ist dies nur das aktuelle Semester. Innerhalb der Semesterordner findest du die Veranstaltungen des jeweiligen Semesters, in denen wiederum die Unterordner und Dokumenter der Veranstaltung zu finden sind.
+                Im Stud.IP-Ordner findest du alle Deine Veranstaltungen, in denen wiederum die Unterordner und Dokument der Veranstaltung zu finden sind.
             </p>
         </details>
         <details>
@@ -186,10 +177,10 @@
         <details>
             <summary>Wie kann ich meine Downloads verwalten?</summary>
             <p>
-                Alle Deine heruntergeladenen Dokumente tauchen—nach Kursen gruppiert—im entsprechenden Tab in StudApp auf. Du kannst sie von dort aus öffnen, teilen, taggen oder per Wischgeste den Download wieder entfernen.
+                Alle Deine heruntergeladenen Dokumente tauchen—nach Veranstaltungen gruppiert—im entsprechenden Tab in StudApp auf. Du kannst sie von dort aus öffnen, teilen, taggen oder per Wischgeste den Download wieder entfernen.
             </p>
             <p>
-                Außerdem bietet StudApp eine Suche für heruntergelade Dateien, die nicht nur Dokument-Titel, sondern auch Kurs und Uploader berücksichtigt.
+                Außerdem bietet StudApp eine Suche für heruntergelade Dateien, die nicht nur Dokument-Titel, sondern auch Veranstalter und Uploader berücksichtigt.
             </p>
         </details>
     </section>
