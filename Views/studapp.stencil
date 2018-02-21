@@ -30,7 +30,7 @@
 
     <section class="feature-section">
         <p>
-            Lorem ipsum dolor sit amet, consectetur adipisici elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat.
+            Mit StudApp is es einfacher denn je, auf Deine Veranstaltungen, Dokumente und Ankündigungen aus Stud.IP zuzugreifen: Als offiziell durch den Stud.IP e.V. zertifizierte App bietet sie Dir hervorragende Möglichkeiten, immer auf dem aktuellen Stand zu bleiben.
         </p>
 
         <a href="#" class="app-store-link">
@@ -40,11 +40,10 @@
         <p></p>
 
         <ul class="list">
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>consectetur adipisici elit</li>
-            <li>sed eiusmod tempor incidunt ut labore et dolore magna aliqua</li>
-            <li>Ut enim ad minim veniam</li>
-            <li>quis nostrud exercitation ullamco laboris nisi</li>
+            <li>Dokumente immer zur Hand—auch ohne Internet</li>
+            <li>Ankündigungen immer im Blick</li>
+            <li>Integration in iOS in die App "Dateien", Spotlight, Handoff und mehr</li>
+            <li>Offline-Verfügbarkeit</li>
         </ul>
     </section>
 {% endblock %}
