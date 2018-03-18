@@ -20,47 +20,4 @@ func initializeApiRoutes(in router: Router) {
             .send(json: result)
             .end()
     }
-
-    router.post("\(apiPath)/verify-receipt/?") { request, response, _ in
-        var receipt = Data()
-        _ = try request.read(into: &receipt)
-
-        AppStoreService.shared.fetchVerified(receipt: receipt) { result in
-            guard
-                let receiptResponse = result.value,
-                let appReceipt = receiptResponse.appReceipt
-            else {
-                try? response
-                    .send(json: ["state": "UNKNOWN"])
-                    .end()
-                return
-            }
-
-            let now = Date()
-            let subscribedUntil = appReceipt.inAppReceipts
-                .filter { $0.productId == subscriptionProductIdentifier && $0.cancelledAt == nil }
-                .flatMap { $0.subscriptionExpiresAt }
-                .filter { $0 > now }
-                .max()
-
-            let isUnlocked = appReceipt.inAppReceipts
-                .filter { $0.productId == unlockProductIdentifier && $0.cancelledAt == nil }
-                .first != nil
-
-            var responseJson = [String: Any]()
-
-            if isUnlocked {
-                responseJson["state"] = "UNLOCKED"
-            } else if let subscribedUntil = subscribedUntil {
-                responseJson["state"] = "SUBSCRIBED"
-                responseJson["subscribedUntil"] = subscribedUntil.timeIntervalSince1970
-            } else {
-                responseJson["state"] = "LOCKED"
-            }
-
-            try? response
-                .send(json: responseJson)
-                .end()
-        }
-    }
 }
