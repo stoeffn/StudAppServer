@@ -28,7 +28,7 @@
                 StudApp funktioniert auf jeden iPhone, iPad und iPod touch, auf dem mindestens iOS 10 läuft. Außerdem benötigst Du natürlich eine Internetverbindung, um auf das Stud.IP Deiner Organisation zugreifen zu können.
             </p>
             <p>
-                Zur Benutzung der App brauchst du auch einen Stud.IP-Zugang bei einer unterstützten Organisation. Falls Deine Organisation noch nicht dabei ist, kannst Du helfen sie hinzuzufügen! Schreibe dafür einfach eine E-Mail an <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a>.
+                Zur Benutzung der App brauchst du auch einen Stud.IP-Zugang bei einer unterstützten Organisation. Falls Deine Organisation noch nicht dabei ist, kannst Du helfen sie hinzuzufügen! Schreibe dafür einfach eine E-Mail an <a href="mailto:studapp@stoeffn.de">studapp@stoeffn.de</a>. Bitte beachte, dass mindestens Stud.IP 4 benötigt wird.
             </p>
         </details>
         <details>
@@ -107,17 +107,13 @@
     </section>
 
     <section>
-        <h2>Semester</h2>
+        <h2>Veranstaltungen</h2>
         <details>
             <summary>Wieso lassen sich einzelne Semester aktivieren oder deaktiveren und welche Auswirkung hat das?</summary>
             <p>
-                Ziel von StudApp ist auch, eine möglichst einfache Benutzerberfläche zu bieten. Und da man häufig nur wenige Semester benötigt (z.B. das aktuelle und gelegentlich das vorherige), kann man die, die nicht gebraucht werden, weil sie zum Beispiel in der Zukunft liegen, einfach ausblenden. Nur diese werden dann in der Dateien-App angezeigt. Keine Angst: Downloads verschwinden auf diese Weise nicht. Standardmäßig ist nur das aktuelle Semester aktiv.
+                Ziel von StudApp ist auch, eine möglichst einfache Benutzerberfläche zu bieten. Und da man häufig nur wenige Semester benötigt (z.B. das aktuelle und gelegentlich das vorherige), kann man die, die nicht gebraucht werden, weil sie zum Beispiel in der Zukunft liegen, einfach ausblenden. Keine Angst: Downloads verschwinden auf diese Weise nicht. Standardmäßig ist nur das aktuelle Semester aktiv.
             </p>
         </details>
-    </section>
-
-    <section>
-        <h2>Veranstaltungen</h2>
         <details>
             <summary>Wie kann ich meine Veranstaltungen organisieren?</summary>
             <p>
