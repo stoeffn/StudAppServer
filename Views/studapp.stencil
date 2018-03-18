@@ -17,11 +17,11 @@
 {% block main %}
     <div class="hero">
         <figure>
-            <img src="/static/img/hero.jpg" />
+            <img src="/static/img/Hero.jpg" />
         </figure>
     </div>
 
-    <img src="/static/img/iphone.png" class="hero-iPhone" />
+    <img src="/static/img/iPhone.png" class="hero-iPhone" />
 
     <section class="hero-section">
         <h1>StudApp</h1>
