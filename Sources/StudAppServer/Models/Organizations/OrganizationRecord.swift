@@ -11,16 +11,12 @@ import OpenCloudKit
 
 struct OrganizationRecord {
     enum Keys: String {
-        case apiUrl, authenticationRealm, title, iconThumbnail, icon
+        case title, iconThumbnail, icon
     }
 
     static let recordType: String = "Organization"
 
     let recordId: CKRecordID
-
-    let apiUrl: URL
-
-    let authenticationRealm: String
 
     let title: String
 
@@ -32,16 +28,11 @@ struct OrganizationRecord {
 extension OrganizationRecord {
     init?(from record: CKRecord) {
         guard record.recordType == OrganizationRecord.recordType,
-            let apiUrlString = record[Keys.apiUrl.rawValue] as? String,
-            let apiUrl = URL(string: apiUrlString),
-            let authenticationRealm = record[Keys.authenticationRealm.rawValue] as? String,
             let title = record[Keys.title.rawValue] as? String,
             let iconThumbnailAsset = record[Keys.iconThumbnail.rawValue] as? CKAsset else { return nil }
         let iconAsset = record[Keys.icon.rawValue] as? CKAsset
 
         recordId = record.recordID
-        self.apiUrl = apiUrl
-        self.authenticationRealm = authenticationRealm
         self.title = title
         iconUrl = iconAsset?.fileURL
         iconThumbnailUrl = iconThumbnailAsset.fileURL

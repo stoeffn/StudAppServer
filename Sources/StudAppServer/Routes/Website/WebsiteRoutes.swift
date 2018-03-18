@@ -27,7 +27,7 @@ func initializeWebsiteRoutes(in router: Router) {
     }
 
     router.get("/help/?") { _, response, _ in
-        OrganizationRecord.fetch(desiredKeys: [.title, .iconThumbnail]) { result in
+        OrganizationRecord.fetch(desiredKeys: [.title, .iconThumbnail], predicate: NSPredicate(format: "isEnabled = YES")) { result in
             let context: [String: Any] = [
                 "copyrightMessage": copyrightMessage,
                 "organizations": result.value ?? [],
