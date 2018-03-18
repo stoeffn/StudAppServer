@@ -61,10 +61,8 @@ final class AppStoreService {
         return decoder
     }()
 
-    func fetchVerified(receipt: Data, in environment: Environments, handler: @escaping ResultHandler<ReceiptResponse>) {
-        guard !receipt.isEmpty else {
-            return handler(.failure(Errors.emptyReceipt))
-        }
+    func fetchVerified(receipt: Data, in environment: Environments, completion: @escaping ResultHandler<ReceiptResponse>) {
+        guard !receipt.isEmpty else { return completion(.failure(Errors.emptyReceipt)) }
 
         do {
             let requestBody = ReceiptRequest(receipt: receipt, sharedSecret: configuration.sharedSecret)
@@ -80,31 +78,25 @@ final class AppStoreService {
                     let encodedResponseBody = data,
                     let response = response as? HTTPURLResponse,
                     200 ... 299 ~= response.statusCode
-                else {
-                    let result = Result<ReceiptResponse>.failure(error ?? Errors.unknown)
-                    return handler(result)
-                }
+                else { return completion(Result<ReceiptResponse>.failure(error ?? Errors.unknown)) }
 
                 do {
                     let responseBody = try self.decoder.decode(ReceiptResponse.self, from: encodedResponseBody)
-                    handler(.success(responseBody))
+                    completion(.success(responseBody))
                 } catch {
-                    let result = Result<ReceiptResponse>.failure(error)
-                    handler(result)
+                    completion(Result<ReceiptResponse>.failure(error))
                 }
             }
             task.resume()
         } catch {
-            let result = Result<ReceiptResponse>.failure(error)
-            return handler(result)
+            return completion(Result<ReceiptResponse>.failure(error))
         }
     }
 
-    func fetchVerified(receipt: Data, handler: @escaping ResultHandler<ReceiptResponse>) {
+    func fetchVerified(receipt: Data, completion: @escaping ResultHandler<ReceiptResponse>) {
         fetchVerified(receipt: receipt, in: .production) { result in
-            guard result.value?.statusCode == 21007 else { return handler(result) }
-
-            self.fetchVerified(receipt: receipt, in: .sandbox, handler: handler)
+            guard result.value?.statusCode == 21007 else { return completion(result) }
+            self.fetchVerified(receipt: receipt, in: .sandbox, completion: completion)
         }
     }
 }

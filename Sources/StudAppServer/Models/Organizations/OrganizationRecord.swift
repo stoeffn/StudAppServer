@@ -40,8 +40,7 @@ extension OrganizationRecord {
 }
 
 extension OrganizationRecord {
-    static func fetch(desiredKeys: [OrganizationRecord.Keys], predicate: NSPredicate = NSPredicate(value: true),
-                      handler: @escaping ResultHandler<[OrganizationRecord]>) {
+    static func fetch(desiredKeys: [OrganizationRecord.Keys], completion: @escaping ResultHandler<[OrganizationRecord]>) {
         var organizations = [OrganizationRecord]()
 
         let query = CKQuery(recordType: OrganizationRecord.recordType, predicate: predicate)
@@ -50,8 +49,7 @@ extension OrganizationRecord {
         operation.qualityOfService = .userInitiated
         operation.desiredKeys = desiredKeys.map { $0.rawValue }
         operation.queryCompletionBlock = { _, error in
-            let result = Result(organizations, error: error)
-            handler(result)
+            completion(Result(organizations, error: error))
         }
         operation.recordFetchedBlock = { record in
             guard let organization = OrganizationRecord(from: record) else { return }
