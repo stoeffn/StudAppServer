@@ -11,7 +11,7 @@ import OpenCloudKit
 
 struct OrganizationRecord {
     enum Keys: String {
-        case title, iconThumbnail, icon
+        case title, isEnabled, iconThumbnail, icon
     }
 
     static let recordType: String = "Organization"
@@ -20,7 +20,7 @@ struct OrganizationRecord {
 
     let title: String
 
-    private let iconUrl: NSURL?
+    let isEnabled: Bool
 
     private let iconThumbnailUrl: NSURL
 }
@@ -29,12 +29,12 @@ extension OrganizationRecord {
     init?(from record: CKRecord) {
         guard record.recordType == OrganizationRecord.recordType,
             let title = record[Keys.title.rawValue] as? String,
+            let isEnabled = record[Keys.isEnabled.rawValue] as? Bool,
             let iconThumbnailAsset = record[Keys.iconThumbnail.rawValue] as? CKAsset else { return nil }
-        let iconAsset = record[Keys.icon.rawValue] as? CKAsset
 
         recordId = record.recordID
         self.title = title
-        iconUrl = iconAsset?.fileURL
+        self.isEnabled = isEnabled
         iconThumbnailUrl = iconThumbnailAsset.fileURL
     }
 }
@@ -43,7 +43,7 @@ extension OrganizationRecord {
     static func fetch(desiredKeys: [OrganizationRecord.Keys], completion: @escaping ResultHandler<[OrganizationRecord]>) {
         var organizations = [OrganizationRecord]()
 
-        let query = CKQuery(recordType: OrganizationRecord.recordType, predicate: predicate)
+        let query = CKQuery(recordType: OrganizationRecord.recordType, predicate: NSPredicate(value: true))
 
         let operation = CKQueryOperation(query: query)
         operation.qualityOfService = .userInitiated
