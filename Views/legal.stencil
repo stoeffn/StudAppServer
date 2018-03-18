@@ -6,7 +6,9 @@
     <a href="/"><img src="/static/img/AppIcon.svg" /> StudApp</a>
 {% endblock %}
 
-{% block navigationLinks %}{% endblock %}
+{% block navigationLinks %}
+    {% include "navigationLinks.stencil" %}
+{% endblock %}
 
 {% block main %}
     <h1>Impressum</h1>
