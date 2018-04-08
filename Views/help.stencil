@@ -34,7 +34,7 @@
         <details>
             <summary>Hat es Vorteile, StudApp unter iOS 11 zu verwenden?</summary>
             <p>
-                Auf jeden Fall: StudApp verwendet eine Integration in die <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, die neu in iOS 11 ist. Und da die Dateien-Funktion die Hauptbestandteil von StudApp ist, erleichert es die Arbeit—vor allem auf dem iPad—ungemein.
+                Auf jeden Fall: StudApp verwendet eine Integration in die <a href="https://support.apple.com/de-de/HT206481" target="_blank">Dateien-App</a>, die neu in iOS 11 ist. Und da die Dateien-Funktion die Hauptbestandteil von StudApp ist, erleichert es die Arbeit—vor allem auf dem iPad—ungemein. Aber auch manche kleinere Sachen wie Swipe-Gesten werden erst ab iOS 11 unterstützt.
             </p>
         </details>
         <details>
@@ -121,6 +121,9 @@
             </p>
             <p>
                 Um Veranstaltungen leichter erkennen zu können, kannst Du ihnen im Menu oder unter iOS 11 auch per Wischgeste eine der offiziellen Stud.IP-Farben geben. Die Veranstaltungsliste wird dann sogar automatisch nach Farbgruppen sortiert! Das ist ziemlich praktisch, um z.B. Vorlesung und Übung zu eienr Veranstaltung immer zusammen zu haben.
+            </p>
+            <p>
+                Bitte beachte, dass Dein Betreiber dafür eventuell ein Stud.IP-Plugin installieren muss.
             </p>
         </details>
     </section>

@@ -73,9 +73,6 @@
         <p>
             Die Authentifizierung mit dem Stud.IP Deines Anbieters funktioniert über das sogenannte OAuth-Verfahren. Dabei erhält der Anbieter keinen Zugriff auf Dein Passwort. Lediglich ein einmalige, zufällig generierte Zugangsschlüssel werden zu Authentifizierungszwecken verschlüsselt lokal gespeichert.
         </p>
-        <p>
-            Aufgrund von Einschränkungen in Stud.IP 4.0, die in Version 4.1 behoben sind, wird ein Anmeldetoken über den Server von StudApp übertragen. Da der Schlüssel zum Signieren von Anfragen weiterhin lokal bleibt, ensteht dadurch kein Sicherheitsrisiko.
-        </p>
     </section>
 
     <section id="personal-data">
