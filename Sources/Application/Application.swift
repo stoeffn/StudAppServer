@@ -10,7 +10,7 @@ import OpenCloudKit
 
 public let health = Health()
 
-public final class StudAppServer {
+public final class Application {
 
     // MARK: - Kitura
 

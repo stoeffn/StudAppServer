@@ -9,8 +9,6 @@ import Foundation
 import Kitura
 
 private let apiPath = "/api/v1"
-private let subscriptionProductIdentifier = "SteffenRyll.StudApp.Subscription"
-private let unlockProductIdentifier = "SteffenRyll.StudApp.Unlock"
 
 func initializeApiRoutes(in router: Router) {
     router.get("\(apiPath)/health/?") { _, response, _ in

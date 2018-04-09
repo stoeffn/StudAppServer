@@ -1,12 +1,12 @@
+@testable import Application
 import Foundation
 import HeliumLogger
 import Kitura
 import KituraNet
 import LoggerAPI
-@testable import StudAppServer
 import XCTest
 
-final class RouteTests: XCTestCase {
+class RouteTests: XCTestCase {
     static var port: Int!
     static var allTests: [(String, (RouteTests) -> () throws -> Void)] {
         return [
@@ -23,9 +23,10 @@ final class RouteTests: XCTestCase {
             print("------------New Test----------")
             print("------------------------------")
 
-            let server = try StudAppServer()
-            RouteTests.port = server.cloudEnv.port
-            Kitura.addHTTPServer(onPort: RouteTests.port, with: server.router)
+            let app = try App()
+            RouteTests.port = app.cloudEnv.port
+            try app.postInit()
+            Kitura.addHTTPServer(onPort: RouteTests.port, with: app.router)
             Kitura.start()
         } catch {
             XCTFail("Couldn't start Application test server: \(error)")
@@ -40,18 +41,39 @@ final class RouteTests: XCTestCase {
     func testGetStatic() {
         let printExpectation = expectation(description: "The /route will serve static HTML content.")
 
-        URLRequest(forTestWithMethod: "GET")?.sendForTestingWithKitura { data, statusCode in
-            if let getResult = String(data: data, encoding: String.Encoding.utf8) {
-                XCTAssertEqual(statusCode, 200)
-                XCTAssertTrue(getResult.contains("<html>"))
-                XCTAssertTrue(getResult.contains("</html>"))
-            } else {
-                XCTFail("Return value from / was nil!")
+        URLRequest(forTestWithMethod: "GET")?
+            .sendForTestingWithKitura { data, statusCode in
+                if let getResult = String(data: data, encoding: String.Encoding.utf8) {
+                    XCTAssertEqual(statusCode, 200)
+                    XCTAssertTrue(getResult.contains("<html"))
+                    XCTAssertTrue(getResult.contains("</html>"))
+                } else {
+                    XCTFail("Return value from / was nil!")
+                }
+
+                printExpectation.fulfill()
             }
 
-            printExpectation.fulfill()
-        }
+        waitForExpectations(timeout: 10.0, handler: nil)
+    }
 
+    func testHealthRoute() {
+        let printExpectation = expectation(description: "The /health route will print UP, followed by a timestamp.")
+
+        URLRequest(forTestWithMethod: "GET", route: "health")?
+            .sendForTestingWithKitura { data, statusCode in
+                if let getResult = String(data: data, encoding: String.Encoding.utf8) {
+                    XCTAssertEqual(statusCode, 200)
+                    XCTAssertTrue(getResult.contains("UP"), "UP not found in the result.")
+                    let date = Date()
+                    let calendar = Calendar.current
+                    let yearString = String(describing: calendar.component(.year, from: date))
+                    XCTAssertTrue(getResult.contains(yearString), "Failed to create String from date. Date is either missing or incorrect.")
+                } else {
+                    XCTFail("Unable to convert request Data to String.")
+                }
+                printExpectation.fulfill()
+            }
         waitForExpectations(timeout: 10.0, handler: nil)
     }
 }
@@ -67,7 +89,7 @@ private extension URLRequest {
                 httpBody = body
             }
         } else {
-            XCTFail("URL is nil…")
+            XCTFail("URL is nil...")
             return nil
         }
     }
@@ -82,12 +104,10 @@ private extension URLRequest {
             path += "?" + query
         }
 
-        let requestOptions: [ClientRequest.Options] = [
-            .method(method), .hostname("localhost"), .port(8080), .path(path),
-            .headers(headers),
-        ]
+        let requestOptions: [ClientRequest.Options] = [.method(method), .hostname("localhost"), .port(8080), .path(path), .headers(headers)]
 
         let req = HTTP.request(requestOptions) { resp in
+
             if let resp = resp, resp.statusCode == HTTPStatusCode.OK || resp.statusCode == HTTPStatusCode.accepted {
                 do {
                     var body = Data()
@@ -110,7 +130,6 @@ private extension URLRequest {
                 }
             }
         }
-
         if let dataBody = httpBody {
             req.end(dataBody)
         } else {

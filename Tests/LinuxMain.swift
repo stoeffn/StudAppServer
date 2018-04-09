@@ -1,4 +1,4 @@
-@testable import StudAppServerTests
+@testable import ApplicationTests
 import XCTest
 
 XCTMain([

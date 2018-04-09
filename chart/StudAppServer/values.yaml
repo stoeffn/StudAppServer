@@ -3,7 +3,7 @@
 replicaCount: 1
 revisionHistoryLimit: 1
 image:
-  repository: registry.ng.bluemix.net/replace-me-namespace/StudAppServer
+  repository: registry.ng.bluemix.net/replace-me-namespace/studappserver
   tag: v1.0.0
   pullPolicy: Always
   resources:
@@ -27,3 +27,12 @@ hpa:
     memory:
       targetAverageUtilization: 70
 services:
+base:
+  enabled: false
+  replicaCount: 1
+  image:
+    tag : v0.9.9
+  weight: 100
+istio:
+  enabled: false
+  weight: 100
