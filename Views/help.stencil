@@ -117,13 +117,19 @@
         <details>
             <summary>Wie kann ich meine Veranstaltungen organisieren?</summary>
             <p>
-                Veranstaltungen werden automatisch nach Semestern gruppiert, die du in der App ein- und ausklappen kannst.
+                Veranstaltungen werden automatisch nach Semestern gruppiert, die du in der App ein- und ausklappen kannst. Einzelne Veranstaltungen kannst Du außerdem ausblenden.
             </p>
             <p>
                 Um Veranstaltungen leichter erkennen zu können, kannst Du ihnen im Menu oder unter iOS 11 auch per Wischgeste eine der offiziellen Stud.IP-Farben geben. Die Veranstaltungsliste wird dann sogar automatisch nach Farbgruppen sortiert! Das ist ziemlich praktisch, um z.B. Vorlesung und Übung zu eienr Veranstaltung immer zusammen zu haben.
             </p>
             <p>
                 Bitte beachte, dass Dein Betreiber dafür eventuell ein Stud.IP-Plugin installieren muss.
+            </p>
+        </details>
+        <details>
+            <summary>Wie komme ich an ausgeblendete Veranstaltungen?</summary>
+            <p>
+                Wenn Du in der Veranstaltungsübersicht auf "Bearbeiten" tippst, findet sich eine Option, mit der Du augeblendete Veranstaltungen wieder anzeigen lassen kannst. Die dann als ausgegraut erscheinenden Veranstaltungen kannst Du dann auch wieder einblenden.
             </p>
         </details>
     </section>
